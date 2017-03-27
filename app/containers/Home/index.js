@@ -19,7 +19,7 @@ const container={
   const navColumn={
       width:"20%",
       height:"100vh",
-      background:"#4A4DA3",
+      background:"#005188",
       display:"flex",
       flexDirection:"column",
 
@@ -32,40 +32,46 @@ const container={
       }
         const wuzGudLogo={
           fontFamily:"Modak",
-          color:"#F2BE29",
-          fontSize:"4em",
+          color:"#CE4632",
+          fontSize:"5em",
           textAlign:"center",
           marginTop:"30px",
-          textShadow:"4.3px 1.5px 1px rgb(0,0,0)",
+          textShadow:"4.3px 1.5px .3px #E6BE2B",
 
         }
       const leftNav={
         width:"99%",
         height:"400px",
         marginTop:"30px",
-        borderTop:"2px solid #6166F2",
-        borderBottom:"2px solid #6166F2",
+        borderTop:"2px solid #2D2C2C",
+        borderBottom:"2px solid #2D2C2C",
         textAlign:"center",
         lineHeight:"65px",
-        color:"#ffffff",
+        color:"#818286",
         fontFamily:"Amiko",
         fontSize:"1.25em"
 
       }
+        const navLink={
+          fontFamily:"Amiko",
+          fontSize:"1.25em",
+          color:"#818286",
+          textDecoration:"none",
+        }
     const contentFeild={
       width:"65%",
       height:"100vh",
-      background:"#4A4DA3",
+      background:"#005188",
     }
 
       const headLine={
         width:"90%",
-        height:"175px",
+        height:"500px",
         margin:"50px",
         marginBottom:"5px",
-        background:"#4A4DA3",
+        background:"#005188",
         textAlign:"center",
-        borderBottom:"2px solid #6166F2",
+        borderBottom:"2px solid #2D2C2C",
       }
       const paper={
         height: "100vh",
@@ -87,7 +93,7 @@ const container={
     const rightScroll={
       width:"25%",
       height:"100vh",
-      background:"#191C6B",
+      background:"#2D2C2C",
     }
 
 
@@ -99,16 +105,17 @@ const container={
           <div style={logo}>
             <div style={wuzGudLogo}>WUZ<br/>GUD
             </div>
-            <div style={leftNav}> Home<br/><Link to="/CyberTrain">THE CYBER TRAIN</Link><br/>Commerce<br/>Gov't<br/>JAM<br/>SHOP.
+            <div style={leftNav}><Link style={navLink} to="/Home">Home</Link><br/><Link style={navLink} to="/CyberTrain">The Cyber Train</Link><br/><Link style={navLink} to="/Commerce">Commerce</Link><br/>
+              <Link style={navLink} to="/Govt">Govt</Link><br/><Link style={navLink} to="/Jam">Jam</Link><br/><Link style={navLink} to="/Shop">Shop</Link>
             </div>
           </div>
         </div>
         <div style={contentFeild}>
-          <div style={headLine}>HEADLINE
+          <div style={headLine}>
           </div>
 
             <div style={content}>
-               hello sdahjfsdkjfghaskdjhfkjasdhfkjashdfkjhasdfkAASDASDASDASDASDHFMDREENWBTAE
+
             </div>
 
         </div>
