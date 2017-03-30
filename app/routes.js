@@ -36,6 +36,24 @@ export default function createRoutes() {
              .catch(errorLoading);
          },
        },
+       {
+       path: '/Infrastructure',
+       name: 'Infrastructure',
+       getComponent(nextState, comMod) {
+         import('containers/Infrastructure')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
+       {
+          path: '/Dashboard',
+          name: 'Dashboard',
+          getComponent(nextState, comMod) {
+            import('containers/Dashboard')
+              .then(loadModule(comMod))
+              .catch(errorLoading);
+          },
+        },
      {
       path: '*',
       name: 'notfound',

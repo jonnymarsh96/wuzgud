@@ -1,8 +1,9 @@
 /*
  *
- * CyberTrain
+ * Infrastructure
  *
  */
+
  import React from 'react';
  import Paper from 'material-ui/Paper';
  import IconButton from 'material-ui/IconButton';
@@ -11,7 +12,7 @@
  import {Link} from 'react-router';
  import Helmet from 'react-helmet';
 
-export default class CyberTrain extends React.PureComponent {
+export default class Infrastructure extends React.PureComponent {
 
   constructor(props){
     super(props);
@@ -106,11 +107,11 @@ export default class CyberTrain extends React.PureComponent {
         const articleTitle={
           background:"rgba(0,0,0,0.7)",
           fontFamily:"amiko",
-          fontSize:"1em",
+          fontSize:"2em",
           color:"#E4EAF2",
           textAlign:"center",
           width:"100%",
-          marginTop:"25%",
+          marginTop:"45%"
 
         }
       const container={
@@ -125,6 +126,7 @@ export default class CyberTrain extends React.PureComponent {
           background:"#D9D7BA",
           display:"flex",
           flexDirection:"column",
+          backgroundAttachment:"fixed",
           position:"fixed",
 
 
@@ -157,7 +159,7 @@ export default class CyberTrain extends React.PureComponent {
             lineHeight:"3.25em",
             color:"#818286",
             fontFamily:"Amiko",
-            fontSize:"1.25em",
+            fontSize:"1.25em"
 
           }
             const navLink={
@@ -181,15 +183,13 @@ export default class CyberTrain extends React.PureComponent {
             width:"85%",
 
             display:"flex",
-            margin:"0 auto",
-            marginTop:"30px",
-            marginBottom:"30px",
+            flexDirection:"grid",
+            margin:"30px",
             position:"relative",
             border:"1px solid #FF49D9",
             borderRadius:"2px",
-            maxHeight:"350px",
-            overflow:"hidden",
-
+            maxHeight:"550px",
+            overflow:"hidden"
           }
           const boxImage={
             width:"100%",
@@ -200,14 +200,11 @@ export default class CyberTrain extends React.PureComponent {
           const paper={
             height: "100vh",
             width: "90%",
+            margin: "45px",
             textAlign: "center",
             display: "inline-block",
             alignSelf:"center",
-            background:"#F2E7AE",
-            fontFamily:"Bungee Hairline",
-            color:"#0019E5",
-            textShadow:"1px 1px #005744",
-            fontWeight:"bold",
+            background:"#4C5DA1"
 
 
           }
@@ -215,29 +212,19 @@ export default class CyberTrain extends React.PureComponent {
               fontFamily:"arial",
               color:"#ffffff",
               textAlign:"center",
-              fontFamily:"Bungee Hairline",
-            }
-            const cyber={
-              height:"40px",
-              width: "50%",
-              display:"inline-block",
-              alignSelf:"center",
-              margin:"20px",
-              backgroundImage:"url(https://cisoshare.com/wp-content/uploads/2017/01/photodune-5258965-online-security-m-900x300.jpg)",
 
             }
-            const rightScroll={
-              width:"25%",
-              height:"100vh",
-              background:"#437336",
-              backgroundAttachment:"fixed",
-              border:"2px solid #FFFFFF",
-              overflow:"auto",
-            }
+        const rightScroll={
+          width:"25%",
+          height:"100vh",
+          background:"#437336",
+          border:"2px solid #FFFFFF",
+          overflow:"auto",
+        }
         const storyImg={
           maxWidth:"200px",
           height:"100px",
-          margin:"5px",
+          margin:"5px"
 
         }
         const storyContainer={
@@ -266,131 +253,131 @@ export default class CyberTrain extends React.PureComponent {
 
 
     return (
-      <div style={container}>
-        <Helmet title="CyberTrain" meta={[ { name: 'description', content: 'Description of CyberTrain' }]}/>
+        <div style={container}>
+          <Helmet title="Infrastructure" meta={[ { name: 'description', content: 'Description of Infrastructure' }]}/>
 
 
 
-        <div style={navColumn}>
-          <div style={logo}>
-            <div style={wuzGudLogo}>WUZ<br/>GUD
-            </div>
-            <div style={leftNav}><Link style={navLink} to="/">Home</Link><br/><Link style={navLink} to="/CyberTrain">The Cyber Train</Link><br/><Link style={navLink} to="/Commerce">Commerce</Link><br/>
-              <Link style={navLink} to="/Govt">Govt</Link><br/><Link style={navLink} to="/Jam">Jam</Link><br/><Link style={navLink} to="/Shop">Shop</Link>
+          <div style={navColumn}>
+            <div style={logo}>
+              <div style={wuzGudLogo}>WUZ<br/>GUD
+              </div>
+              <div style={leftNav}><Link style={navLink} to="/">Home</Link><br/><Link style={navLink} to="/CyberTrain">The Cyber Train</Link><br/><Link style={navLink} to="/Commerce">Commerce</Link><br/>
+                <Link style={navLink} to="/Govt">Govt</Link><br/><Link style={navLink} to="/Jam">Jam</Link><br/><Link style={navLink} to="/Shop">Shop</Link>
+              </div>
             </div>
           </div>
+
+          <div style={contentFeild}>
+            <div>
+
+              <div style={boxStyle}>
+                <img style={boxImage} src={this.state.activeArticle.articleImage}/>
+                  <div style={imageOverlay}>
+                    <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
+                      <span style={articleTitle}>
+                        {this.state.activeArticle.articleTitle}
+                        <br/>
+
+                        {this.state.activeArticle.articleBody}
+                      </span>
+                    <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
+                  </div>
+              </div>
+
+            </div>
+
+              <div style={content}>
+                <Paper style={paper}>
+                  <h1 style={cyber}>The Cyber Train</h1>
+                </Paper>
+              </div>
+
+          </div>
+          <div style={rightScroll}>
+
+            <div style={storyContainer}>
+
+              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+
+              <div style={storyContent}>
+                <h3>Infrastructure</h3>
+                <span>Round-a-bout construction on Wheeler @ Aumond</span>
+              </div>
+
+            </div>
+            <div style={storyContainer}>
+
+              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
+
+              <div style={storyContent}>
+                <h3>The Cyber Train</h3>
+                <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
+              </div>
+
+            </div>
+
+            <div style={storyContainer}>
+
+              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
+
+              <div style={storyContent}>
+                <h3>JAM</h3>
+                <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
+              </div>
+
+            </div>
+
+            <div style={storyContainer}>
+              <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
+
+              <div style={storyContent}>
+                <h3>Infrastructure</h3>
+                <span>New arena project slows down</span>
+              </div>
+            </div>
+
+            <div style={storyContainer}>
+              <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
+              <div style={storyContent}>
+                <h3>Govt</h3>
+                <span>Georgia Senate backs guns on campus, setting up final vote</span>
+              </div>
+            </div>
+
+            <div style={storyContainer}>
+              <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
+              <div style={storyContent}>
+                <h3>Commerce</h3>
+                <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
+              </div>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div>
+            <div style={storyContainer}>
+            </div><div style={storyContainer}>
+            </div>
+          </div>
+
         </div>
-
-        <div style={contentFeild}>
-          <div>
-
-            <div style={boxStyle}>
-              <img style={boxImage} src={this.state.activeArticle.articleImage}/>
-                <div style={imageOverlay}>
-                  <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
-                    <span style={articleTitle}>
-                      {this.state.activeArticle.articleTitle}
-                      <br/>
-
-                      {this.state.activeArticle.articleBody}
-                    </span>
-                  <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
-                </div>
-            </div>
-
-          </div>
-
-            <div style={content}>
-              <Paper style={paper}>
-                <h1 style={cyber}>The Cyber Train</h1>
-              </Paper>
-            </div>
-
-        </div>
-        <div style={rightScroll}>
-
-          <div style={storyContainer}>
-
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
-
-            <div style={storyContent}>
-              <h3>Infrastructure</h3>
-              <span>Round-a-bout construction on Wheeler @ Aumond</span>
-            </div>
-
-          </div>
-          <div style={storyContainer}>
-
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
-
-            <div style={storyContent}>
-              <h3>The Cyber Train</h3>
-              <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
-            </div>
-
-          </div>
-
-          <div style={storyContainer}>
-
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
-
-            <div style={storyContent}>
-              <h3>JAM</h3>
-              <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
-            </div>
-
-          </div>
-
-          <div style={storyContainer}>
-            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
-
-            <div style={storyContent}>
-              <h3>Infrastructure</h3>
-              <span>New arena project slows down</span>
-            </div>
-          </div>
-
-          <div style={storyContainer}>
-            <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
-            <div style={storyContent}>
-              <h3>Govt</h3>
-              <span>Georgia Senate backs guns on campus, setting up final vote</span>
-            </div>
-          </div>
-
-          <div style={storyContainer}>
-            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
-            <div style={storyContent}>
-              <h3>Commerce</h3>
-              <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
-            </div>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div><div style={storyContainer}>
-          </div>
-        </div>
-
-      </div>
-    );
-  }
-}
+      );
+      }
+      }
