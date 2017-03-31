@@ -7,6 +7,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import IconButton from 'material-ui/IconButton';
+import Responsive from 'react-responsive';
 import ChevLeft from 'material-ui/svg-icons/navigation/chevron-left';
 import ChevRight from 'material-ui/svg-icons/navigation/chevron-right';
 import {Link} from 'react-router';
@@ -174,6 +175,7 @@ const imageOverlay={
       backgroundAttachment:"fixed",
       overflow:"auto",
       marginLeft:"20%",
+      position:"absolute",
     }
 
 
@@ -184,8 +186,8 @@ const imageOverlay={
         flexDirection:"grid",
         margin:"30px",
         position:"relative",
-        border:"1px solid #FF49D9",
-        borderRadius:"2px",
+        border:"2px solid #F2E7AE",
+        borderRadius:"3px",
         maxHeight:"550px",
         overflow:"hidden"
       }
@@ -218,6 +220,8 @@ const imageOverlay={
       background:"#437336",
       border:"2px solid #FFFFFF",
       overflow:"auto",
+      positon:"absolute",
+      marginLeft:"75%",
     }
     const storyImg={
       maxWidth:"40%",
@@ -251,10 +255,11 @@ const storyContent={
 }
 
     return (
-      <div style={container}>
+      <div >
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
-//**
+
       <Responsive minDeviceWidth={1024}>
+
         <div style={navColumn}>
           <div style={logo}>
             <div style={wuzGudLogo}>WUZ<br/>GUD
@@ -265,7 +270,7 @@ const storyContent={
           </div>
         </div>
       </Responsive>
-//*******************************************
+
       <Responsive maxDeviceWidth={1023}>
         <div style={navColumn}>
           <div style={logo}>
@@ -277,10 +282,9 @@ const storyContent={
           </div>
         </div>
       </Responsive>
-//******************************************
 
-//******************************************
-      <Responsive minDeviceWidth={1024}>
+      <Responsive minDeviceWidth={1024} style={container}>
+
         <div style={contentFeild}>
           <div>
 
@@ -307,93 +311,101 @@ const storyContent={
         </div>
         <div style={rightScroll}>
 
-          <div style={storyContainer}>
+        <div style={storyContainer}>
 
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
 
-            <div style={storyContent}>
+          <div style={storyContent}>
+            <Link style={navLink} to="/CyberTrain"><h3>The Cyber Train</h3>
+            <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
+            </Link>
+          </div>
+
+        </div>
+
+        <div style={storyContainer}>
+
+          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
+
+          <div style={storyContent}>
+            <Link style={navLink} to="/Jam"><h3>JAM</h3>
+            <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
+            </Link>
+          </div>
+
+        </div>
+        <div style={storyContainer}>
+
+          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+
+          <div style={storyContent}>
+            <Link style={navLink} to="/Infrastructure">
               <h3>Infrastructure</h3>
               <span>Round-a-bout construction on Wheeler @ Aumond</span>
-            </div>
-
-          </div>
-          <div style={storyContainer}>
-
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
-
-            <div style={storyContent}>
-              <Link style={navLink} to="/CyberTrain"><h3>The Cyber Train</h3>
-              <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span></Link>
-            </div>
-
+            </Link>
           </div>
 
-          <div style={storyContainer}>
+        </div>
+        <div style={storyContainer}>
+          <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
 
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
-
-            <div style={storyContent}>
-              <h3>JAM</h3>
-              <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
-            </div>
-
-          </div>
-
-          <div style={storyContainer}>
-            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
-
-            <div style={storyContent}>
+          <div style={storyContent}>
+            <Link style={navLink} to="/Infrastructure">
               <h3>Infrastructure</h3>
               <span>New arena project slows down</span>
-            </div>
-          </div>
-
-          <div style={storyContainer}>
-            <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
-            <div style={storyContent}>
-              <h3>Govt</h3>
-              <span>Georgia Senate backs guns on campus, setting up final vote</span>
-            </div>
-          </div>
-
-          <div style={storyContainer}>
-            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
-            <div style={storyContent}>
-              <h3>Commerce</h3>
-              <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
-            </div>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
+            </Link>
           </div>
         </div>
 
-      
+        <div style={storyContainer}>
+          <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
+          <div style={storyContent}>
+            <Link style={navLink} to="/Govt">
+              <h3>Govt</h3>
+              <span>Georgia Senate backs guns on campus, setting up final vote</span>
+            </Link>
+          </div>
+        </div>
+
+        <div style={storyContainer}>
+          <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
+          <div style={storyContent}>
+            <Link style={navLink} to="/Commerce"><h3>Commerce</h3>
+            <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
+            </Link>
+          </div>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+          <div style={storyContainer}>
+          </div>
+
+
+        </div>
     </Responsive>
-//**********************************^ desktop...
-//**********************************v mobile..
-   <Responsive minDeviceWidth={1024}>
+
+   <Responsive maxDeviceWidth={1023}>
+
       <div style={contentFeild}>
         <div>
 
@@ -504,6 +516,7 @@ const storyContent={
 
 
   </Responsive>
+  </div>
     );
   }
 }

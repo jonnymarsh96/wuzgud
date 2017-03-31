@@ -8,6 +8,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 export default class Dashboard extends React.PureComponent {
+
 constructor (props){
   super(props);
   this.state={
@@ -51,7 +52,7 @@ storeArticle = () => {
   data.append("title", this.state.title);
   data.append("body", this.state.body);
   data.append("img", this.state.img);
-  fetch("", {
+  fetch("http://localhost:8000/api/storeArticle", {
     method:"post",
     body:data
   })
@@ -63,7 +64,7 @@ storeArticle = () => {
       alert("success");
     }
     else if(json.error){
-    alert("error");  
+    alert("error");
     }
   })
 

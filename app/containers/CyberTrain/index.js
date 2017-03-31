@@ -185,8 +185,8 @@ export default class CyberTrain extends React.PureComponent {
             marginTop:"30px",
             marginBottom:"30px",
             position:"relative",
-            border:"1px solid #FF49D9",
-            borderRadius:"2px",
+            border:"2px solid #F2E7AE",
+            borderRadius:"3px",
             maxHeight:"350px",
             overflow:"hidden",
 
@@ -223,7 +223,7 @@ export default class CyberTrain extends React.PureComponent {
               display:"inline-block",
               alignSelf:"center",
               margin:"20px",
-              backgroundImage:"url(https://cisoshare.com/wp-content/uploads/2017/01/photodune-5258965-online-security-m-900x300.jpg)",
+              
 
             }
             const rightScroll={
@@ -314,8 +314,10 @@ export default class CyberTrain extends React.PureComponent {
             <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
 
             <div style={storyContent}>
-              <h3>Infrastructure</h3>
-              <span>Round-a-bout construction on Wheeler @ Aumond</span>
+              <Link style={navLink} to="/Infrastructure">
+                <h3>Infrastructure</h3>
+                <span>Round-a-bout construction on Wheeler @ Aumond</span>
+              </Link>
             </div>
 
           </div>
@@ -324,8 +326,9 @@ export default class CyberTrain extends React.PureComponent {
             <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
 
             <div style={storyContent}>
-              <h3>The Cyber Train</h3>
+              <Link style={navLink} to="/CyberTrain"><h3>The Cyber Train</h3>
               <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
+              </Link>
             </div>
 
           </div>
@@ -335,8 +338,9 @@ export default class CyberTrain extends React.PureComponent {
             <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
 
             <div style={storyContent}>
-              <h3>JAM</h3>
+              <Link style={navLink} to="/Jam"><h3>JAM</h3>
               <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
+              </Link>
             </div>
 
           </div>
@@ -345,24 +349,29 @@ export default class CyberTrain extends React.PureComponent {
             <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
 
             <div style={storyContent}>
-              <h3>Infrastructure</h3>
-              <span>New arena project slows down</span>
+              <Link style={navLink} to="/Infrastructure">
+                <h3>Infrastructure</h3>
+                <span>New arena project slows down</span>
+              </Link>
             </div>
           </div>
 
           <div style={storyContainer}>
             <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
             <div style={storyContent}>
-              <h3>Govt</h3>
-              <span>Georgia Senate backs guns on campus, setting up final vote</span>
+              <Link style={navLink} to="/Govt">
+                <h3>Govt</h3>
+                <span>Georgia Senate backs guns on campus, setting up final vote</span>
+              </Link>
             </div>
           </div>
 
           <div style={storyContainer}>
             <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
             <div style={storyContent}>
-              <h3>Commerce</h3>
+              <Link style={navLink} to="/Commerce"><h3>Commerce</h3>
               <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
+              </Link>
             </div>
           </div>
           <div style={storyContainer}>
