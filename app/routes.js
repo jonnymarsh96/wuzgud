@@ -37,6 +37,15 @@ export default function createRoutes() {
          },
        },
        {
+          path: '/Govt',
+          name: 'Govt',
+          getComponent(nextState, comMod) {
+            import('containers/Govt')
+              .then(loadModule(comMod))
+              .catch(errorLoading);
+            },
+          },
+       {
        path: '/Infrastructure',
        name: 'Infrastructure',
        getComponent(nextState, comMod) {
