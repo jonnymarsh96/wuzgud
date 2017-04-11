@@ -306,54 +306,66 @@ export default class Commerce extends React.PureComponent {
             </Responsive>
 
             <Responsive maxDeviceWidth={1024}>
-            <div style={contentFeild}>
-              <div>
+              <div style={contentFeild}>
+                <div>
 
-                <div style={boxStyle}>
-                  <img style={boxImage} src={this.state.activeArticle.articleImage}/>
-                    <div style={imageOverlay}>
-                      <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
-                        <span style={articleTitle}>
+                  <div style={boxStyle}>
+                    <img style={boxImage} src={this.state.activeArticle.articleImage}/>
+                      <div style={imageOverlay}>
+                        <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
+                          <span style={articleTitle}>
                           {this.state.activeArticle.articleTitle}
-                          <br/>
+                            <br/>
 
                           {this.state.activeArticle.articleBody}
-                        </span>
-                      <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
-                    </div>
+                          </span>
+                          <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
+                      </div>
+                  </div>
+
+                  </div>
+
+                  <div style={content}>
+                    <Paper style={paper}>
+                      <h1 style={cyber}>Dealings</h1>
+                      <p style={paperBody}>
+                        Look here for all the newsest news here in local business.
+                      </p>
+                    </Paper>
+                </div>
+              </div>
+            </Responsive>
+
+              <Responsive minDeviceWidth={1023}>
+              <div style={contentFeild}>
+                <div>
+
+                  <div style={boxStyle}>
+                    <img style={boxImage} src={this.state.activeArticle.articleImage}/>
+                      <div style={imageOverlay}>
+                        <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
+                          <span style={articleTitle}>
+                            {this.state.activeArticle.articleTitle}
+                            <br/>
+
+                            {this.state.activeArticle.articleBody}
+                          </span>
+                        <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
+                      </div>
+                  </div>
+
                 </div>
 
-              </div>
-              </div>
-              </Responsive>
-
-
-              <Responsive maxDeviceWidth={1024}>
                 <div style={content}>
                   <Paper style={paper}>
-                    <h1 style={cyber}>COMMERCE</h1>
+                    <h1 style={cyber}>Dealings</h1>
                     <p style={paperBody}>
                       Look here for all the newsest news here in local business.
                     </p>
                   </Paper>
                 </div>
-
-
-
+                </div>
               </Responsive>
-
-            <Responsive minDeviceWidth={1023}>
-              <div style={content}>
-                <Paper style={paper}>
-                  <h1 style={cyber}>COMMERCE</h1>
-                  <p style={paperBody}>
-                    Look here for all the newsest news here in local business.
-                  </p>
-                </Paper>
-              </div>
-
-
-            </Responsive>
 
             <Responsive maxDeviceWidth={1024}>
               <div style={rightScroll}>

@@ -51,7 +51,7 @@ storeArticle = () => {
   var data = new FormData();
   data.append("title", this.state.title);
   data.append("body", this.state.body);
-  data.append("img", this.state.img);
+  data.append("image", this.state.img);
   fetch("http://localhost:8000/api/storeArticle", {
     method:"post",
     body:data
@@ -76,7 +76,7 @@ storeArticle = () => {
           <input onChange={this.handleTitle} value={this.state.title} type="text" placeholder="title" />
           <input onChange={this.handleBody} type="text" value={this.state.body} placeholder="body" />
           <input onChange={this.handleImg} type="file"/>
-          <input type="submit"/>
+          <input type="submit" onTouchTap={this.storeArticle}/>
           <img src={this.state.preview}/>
       </div>
     );
