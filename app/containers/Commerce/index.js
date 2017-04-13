@@ -12,6 +12,8 @@
  import ChevRight from 'material-ui/svg-icons/navigation/chevron-right';
  import {Link} from 'react-router';
  import Helmet from 'react-helmet';
+ import Drawer from 'material-ui/Drawer';
+ import NewsIcon from 'material-ui/svg-icons/av/library-books';
 export default class Commerce extends React.PureComponent {
   constructor(props){
     super(props);
@@ -34,9 +36,22 @@ export default class Commerce extends React.PureComponent {
         }
       ],
       active:0,
-      activeArticle:""
+      activeArticle:"",
+
+      drawerOpen: false
+
 
     }
+  }
+  handleOpen = () => {
+    this.setState({
+      drawerOpen: true
+    })
+  }
+  handleClose = () => {
+    this.setState({
+      drawerOpen: false
+    })
   }
   componentWillMount(){
     this.setState({
@@ -150,9 +165,21 @@ export default class Commerce extends React.PureComponent {
         lineHeight:"3.25em",
         color:"#818286",
         fontFamily:"Amiko",
-        fontSize:"1em",
+        fontSize:".8em",
         wordSpacing:"2em",
         }
+        const mLeftNav2={
+          width:"50%",
+          maxHeight:"100px",
+          marginTop:"50px",
+          margin:"0 auto",
+          textAlign:"center",
+          lineHeight:"3.25em",
+          color:"#818286",
+          fontFamily:"Amiko",
+          fontSize:".6em",
+          wordSpacing:"2em",
+          }
       const navColumn={
           width:"20%",
           height:"100vh",
@@ -186,7 +213,7 @@ export default class Commerce extends React.PureComponent {
 
             }
         const contentFeild={
-          width:"75%",
+          width:"100%",
           height:"100vh",
           background:"#FFFAE4",
           backgroundAttachment:"fixed",
@@ -243,28 +270,36 @@ export default class Commerce extends React.PureComponent {
             }
             const cyber={
               height:"40px",
-              width: "50%",
+
               display:"inline-block",
               alignSelf:"center",
               margin:"20px",
-              fontSize:"3em",
-              fontFamily:"Chicle",
+              fontSize:"1em",
+              textAlign:"center",
+              fontFamily:"Asset",
               color:"#85bb65",
               textShadow:"1px 2px #5f9341",
               letterSpacing:"5px",
 
             }
             const rightScroll={
-              width:"25%",
               height:"100vh",
               background:"#FFFAE4",
               backgroundAttachment:"fixed",
               overflow:"auto",
 
             }
+            const storyLink={
+              fontFamily:"Amiko",
+              fontSize:".8em",
+              color:"#C2543C",
+              textDecoration:"none",
+
+
+            }
         const storyImg={
-          maxWidth:"200px",
-          height:"100px",
+          width:"80px",
+          maxHeight:"70px",
           margin:"5px",
 
         }
@@ -282,7 +317,8 @@ export default class Commerce extends React.PureComponent {
           display:"flex",
           flexDirection:"row",
           whiteSpace:"normal",
-          color:"#739A97",
+          color:"#C2543C",
+          background:"#F2E7AE",
 
         }
     const storyContent={
@@ -295,17 +331,36 @@ export default class Commerce extends React.PureComponent {
       return (
         <div>
           <Helmet title="Commerce" meta={[ { name: 'description', content: 'Description of Commerce' }]}/>
-          <div style={navColumn2}>
-            <div style={logo2}>
-              WUZ <br/> GUD
+
+
+          <Responsive minDeviceWidth={1024}>
+            <div style={navColumn2}>
+              <div style={logo2}>
+                WUZ <br/> GUD
+              </div>
+
+
+                  <div style={leftNav2}><Link style={navLink} to="/">Home </Link><Link style={navLink} to="/CyberTrain"> CyberTrain </Link><Link style={navLink} to="/Commerce"> Commerce </Link>
+                    <Link style={navLink} to="/Govt"> Govt </Link><Link style={navLink} to="/Jam"> Jam </Link><Link style={navLink} to="/Shop"> Shop </Link>
+                  </div>
+
             </div>
+          </Responsive>
+
+          <Responsive maxDeviceWidth={1023}>
+            <div style={navColumn2}>
+              <div style={logo2}>
+                WUZ <br/> GUD
+              </div>
 
 
-                <div style={leftNav2}><Link style={navLink} to="/">Home </Link><Link style={navLink} to="/CyberTrain"> CyberTrain </Link><Link style={navLink} to="/Commerce"> Commerce </Link>
-                  <Link style={navLink} to="/Govt"> Govt </Link><Link style={navLink} to="/Jam"> Jam </Link><Link style={navLink} to="/Shop"> Shop </Link>
-                </div>
+                  <div style={mLeftNav2}><Link style={navLink} to="/">Home </Link><Link style={navLink} to="/CyberTrain"> CyberTrain </Link><Link style={navLink} to="/Commerce"> Commerce </Link>
+                    <Link style={navLink} to="/Govt"> Govt </Link><Link style={navLink} to="/Jam"> Jam </Link><Link style={navLink} to="/Shop"> Shop </Link>
+                  </div>
+                  <IconButton onTouchTap={this.handleOpen}><NewsIcon color='#F2E7AE'/></IconButton>
+            </div>
+          </Responsive>
 
-          </div>
           <div style={container} >
 
 
@@ -333,7 +388,7 @@ export default class Commerce extends React.PureComponent {
 
                     <div style={content}>
                       <Paper style={paper}>
-                        <h1 style={cyber}>Dealings</h1>
+                        <h1 style={cyber}>DEALINGS</h1>
                         <p style={paperBody}>
                           Look here for all the newsest news here in local business.
                         </p>
@@ -364,7 +419,7 @@ export default class Commerce extends React.PureComponent {
 
                   <div style={content}>
                     <Paper style={paper}>
-                      <h1 style={cyber}>Dealings</h1>
+                      <h1 style={cyber}>DEALINGS</h1>
                       <p style={paperBody}>
                         Look here for all the newsest news here in local business.
                       </p>
@@ -373,7 +428,7 @@ export default class Commerce extends React.PureComponent {
                   </div>
                 </Responsive>
 
-              <Responsive maxDeviceWidth={1024}>
+              <Responsive minDeviceWidth={1024}>
                 <div style={rightScroll}>
 
                 <div style={storyContainer}>
@@ -381,7 +436,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Infrastructure">
+                    <Link style={storyLink} to="/Infrastructure">
                       <h3>Infrastructure</h3>
                       <span>Round-a-bout construction on Wheeler @ Aumond</span>
                     </Link>
@@ -393,7 +448,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/CyberTrain"><h3>The Cyber Train</h3>
+                    <Link style={storyLink} to="/CyberTrain"><h3>The Cyber Train</h3>
                     <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
                     </Link>
                   </div>
@@ -405,7 +460,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Jam"><h3>JAM</h3>
+                    <Link style={storyLink} to="/Jam"><h3>JAM</h3>
                     <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
                     </Link>
                   </div>
@@ -416,7 +471,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Infrastructure">
+                    <Link style={storyLink} to="/Infrastructure">
                       <h3>Infrastructure</h3>
                       <span>New arena project slows down</span>
                     </Link>
@@ -426,7 +481,7 @@ export default class Commerce extends React.PureComponent {
                 <div style={storyContainer}>
                   <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Govt">
+                    <Link style={storyLink} to="/Govt">
                       <h3>Govt</h3>
                       <span>Georgia Senate backs guns on campus, setting up final vote</span>
                     </Link>
@@ -436,7 +491,7 @@ export default class Commerce extends React.PureComponent {
                 <div style={storyContainer}>
                   <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Commerce"><h3>Commerce</h3>
+                    <Link style={storyLink} to="/Commerce"><h3>Commerce</h3>
                     <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
                     </Link>
                   </div>
@@ -467,7 +522,13 @@ export default class Commerce extends React.PureComponent {
                </div>
               </Responsive>
 
-              <Responsive minDeviceWidth={1023}>
+              <Responsive maxDeviceWidth={1023}>
+                  <Drawer
+                     docked={false}
+                     open={this.state.drawerOpen}
+                     onRequestChange={this.handleClose}
+                     openSecondary={true}>
+
                 <div style={rightScroll}>
 
                 <div style={storyContainer}>
@@ -475,7 +536,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Infrastructure">
+                    <Link style={storyLink} to="/Infrastructure">
                       <h3>Infrastructure</h3>
                       <span>Round-a-bout construction on Wheeler @ Aumond</span>
                     </Link>
@@ -487,7 +548,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/CyberTrain"><h3>The Cyber Train</h3>
+                    <Link style={storyLink} to="/CyberTrain"><h3>The Cyber Train</h3>
                     <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
                     </Link>
                   </div>
@@ -499,7 +560,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Jam"><h3>JAM</h3>
+                    <Link style={storyLink} to="/Jam"><h3>JAM</h3>
                     <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
                     </Link>
                   </div>
@@ -510,7 +571,7 @@ export default class Commerce extends React.PureComponent {
                   <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
 
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Infrastructure">
+                    <Link style={storyLink} to="/Infrastructure">
                       <h3>Infrastructure</h3>
                       <span>New arena project slows down</span>
                     </Link>
@@ -520,7 +581,7 @@ export default class Commerce extends React.PureComponent {
                 <div style={storyContainer}>
                   <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Govt">
+                    <Link style={storyLink} to="/Govt">
                       <h3>Govt</h3>
                       <span>Georgia Senate backs guns on campus, setting up final vote</span>
                     </Link>
@@ -530,7 +591,7 @@ export default class Commerce extends React.PureComponent {
                 <div style={storyContainer}>
                   <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
                   <div style={storyContent}>
-                    <Link style={navLink} to="/Commerce"><h3>Commerce</h3>
+                    <Link style={storyLink} to="/Commerce"><h3>Commerce</h3>
                     <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
                     </Link>
                   </div>
@@ -559,6 +620,7 @@ export default class Commerce extends React.PureComponent {
                 </div><div style={storyContainer}>
                 </div>
                </div>
+               </Drawer>
               </Responsive>
 
             </div>
