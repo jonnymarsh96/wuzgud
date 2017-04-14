@@ -20,18 +20,18 @@ export default class Home extends React.PureComponent {
       data:[
         {
           articleImage:"https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4",
-          articleTitle:"Infrastructure",
-          articleBody:"Round-a-bout construction on Wheeler @ Aumond"
+          articleTitle:"INFRASTRUCTURE",
+          articleBody:"/  more."
         },
         {
           articleImage:"https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93",
-          articleTitle:"Jam",
-          articleBody:"4th Annual Major Rager april, 4th"
+          articleTitle:"JAM",
+          articleBody:"/  more"
         },
         {
           articleImage:"https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06",
-          articleTitle:"The Cyber Train",
-          articleBody:"Choo Choo! C'mon y'all. Augusta is fastly chuggin' to becoming the cyber capital of the nation!",
+          articleTitle:"CYBERTRAIN",
+          articleBody:"/  more.",
         }
       ],
       active:0,
@@ -95,108 +95,137 @@ const imageOverlay={
         position:"absolute",
         top:"0",
         width:"100%",
-        height:"100%",
+        height:"100vh",
         display:"flex",
         justifyContent:"space-between",
         alignItems:"center",
-        maxHeight:"700px",
+        maxHeight:"850px",
         overflow:"hidden",
+        border:""
 
+    }
+    const articleBody={
+      fontSize:".5em",
+      fontFamily:"Amiko",
+      color:"#C4C4C4",
     }
     const articleTitle={
-      background:"rgba(0,0,0,0.7)",
+      background:"linear-gradient(to left, rgba(50, 50, 50, .3), rgba(50, 50, 50, 1))",
       fontFamily:"amiko",
+      fontWeight:"bold",
       fontSize:"2em",
-      color:"#E4EAF2",
+      color:"#D9D7BA",
       textAlign:"center",
-      width:"100%",
-      marginTop:"45%"
+      width:"50%",
+      height:"100%",
+      position:"absolute",
+      left:"-250px",
+      transform: "skewX(-30deg)",
+      border:"15px rgba(4, 115, 70, .2)"
+
+
+
 
     }
-  const container={
-  display:"flex",
-  flexDirection:"row",
+    const skewCancel={
+      transform: "skewX(30deg)",
+      fontFamily:"amiko",
+      fontSize:"1.5em",
+      color:"#D9D7BA",
+      marginTop:"300px",
+      right:"o"
+    }
 
-}
+  const container={
+
+
+  }
 
   const navColumn={
-      width:"20%",
-      height:"100vh",
-      background:"#D9D7BA",
-      display:"flex",
-      flexDirection:"column",
-      backgroundAttachment:"fixed",
-      position:"fixed",
+    width:"100%",
+    height:"200px",
+    background:"#323232",
+    outline:"20px solid rgba(50, 50, 50, .5)",
+    zIndex:"100",
+    display:"flex",
+    flexDirection:"row",
 
 
 
 
     }
       const logo={
-        width:"90%",
-        height:"10%",
-
+        width:"30%",
+        height:"0",
+        margin:"0 auto",
+        borderTop: "200px solid #D9D7BA",
+        borderLeft: "100px solid transparent",
+	      borderRight: "100px solid transparent",
+        zIndex:"120",
 
 
       }
         const wuzGudLogo={
           fontFamily:"Modak",
           color:"#E6BE2B",
-          fontSize:"5em",
+          fontSize:"3em",
           textAlign:"center",
-          marginTop:"30px",
+          marginTop:"10px",
           textShadow:"4.3px 1.5px .3px #CE4632",
-
+          position:"absolute",
+          top:"0",
+          right:"0",
+          left:"0",
         }
       const leftNav={
-        width:"90%",
+        width:"50%",
         height:"auto",
-        marginTop:"10%",
-        borderTop:"2px solid #F2E7AE",
-        borderBottom:"2px solid #F2E7AE",
+        marginTop:"500px",
+        margin:"0 auto",
         textAlign:"center",
         lineHeight:"3.25em",
-        color:"#818286",
+        color:"#323232",
         fontFamily:"Amiko",
-        fontSize:"1.25em"
+        fontSize:".8em",
+        wordSpacing:"2em",
 
       }
         const navLink={
           fontFamily:"Amiko",
           fontSize:".8em",
-          color:"#818286",
+          color:"#323232",
           textDecoration:"none",
           fontWeight:"bold",
+          wordSpacing:"7em"
         }
     const contentFeild={
-      width:"55%",
+      width:"100%",
       height:"100vh",
       background:"#D9D7BA",
       backgroundAttachment:"fixed",
       overflow:"auto",
-      marginLeft:"20%",
       position:"absolute",
+
+
     }
 
 
       const boxStyle={
-        width:"85%",
-
-        display:"flex",
-        flexDirection:"grid",
-        margin:"30px",
+        width:"100%",
+        margin:"0px",
         position:"relative",
-        border:"2px solid #F2E7AE",
+        alignSelf:"center",
         borderRadius:"3px",
-        maxHeight:"550px",
-        overflow:"hidden"
+        maxHeight:"850px",
+        overflow:"hidden",
       }
       const boxImage={
         width:"100%",
-        height:"80%",
+        height:"100%",
         margin:"0 auto",
 
-    }
+
+      }
       const paper={
         height: "100vh",
         width: "90%",
@@ -204,7 +233,8 @@ const imageOverlay={
         textAlign: "center",
         display: "inline-block",
         alignSelf:"center",
-        background:"#4C5DA1"
+        background:"#4C5DA1",
+        marginTop:"500px",
 
 
       }
@@ -212,6 +242,7 @@ const imageOverlay={
           fontFamily:"arial",
           color:"#ffffff",
           textAlign:"center",
+          marginTop:"500px",
 
         }
     const rightScroll={
@@ -226,7 +257,7 @@ const imageOverlay={
     const storyImg={
       maxWidth:"40%",
       height:"100px",
-      margin:"5px"
+      margin:"5px",
 
     }
     const storyContainer={
@@ -264,8 +295,8 @@ const storyContent={
           <div style={logo}>
             <div style={wuzGudLogo}>WUZ<br/>GUD
             </div>
-            <div style={leftNav}><Link style={navLink} to="/">Home</Link><br/><Link style={navLink} to="/CyberTrain">The Cyber Train</Link><br/><Link style={navLink} to="/Commerce">Commerce</Link><br/>
-              <Link style={navLink} to="/Govt">Govt</Link><br/><Link style={navLink} to="/Jam">Jam</Link><br/><Link style={navLink} to="/Shop">Shop</Link>
+            <div style={leftNav}><Link style={navLink} to="/">Home </Link><Link style={navLink} to="/CyberTrain"> CyberTrain </Link><Link style={navLink} to="/Commerce"> Dealings </Link>
+              <Link style={navLink} to="/Govt"> Govt </Link><Link style={navLink} to="/Jam"> Jam </Link><Link style={navLink} to="/Shop"> Shop </Link>
             </div>
           </div>
         </div>
@@ -284,23 +315,26 @@ const storyContent={
       </Responsive>
 
       <Responsive minDeviceWidth={1024} style={container}>
+        <div style={boxStyle}>
+          <img style={boxImage} src={this.state.activeArticle.articleImage}/>
+            <div style={imageOverlay}>
+              <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
 
+                <span style={articleTitle}>
+                  <p style={skewCancel}>
+                    {this.state.activeArticle.articleTitle}
+                    <br/>
+
+                    <p style={articleBody}>{this.state.activeArticle.articleBody}</p>
+                  </p>
+                </span>
+              <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
+            </div>
+        </div>
         <div style={contentFeild}>
           <div>
 
-            <div style={boxStyle}>
-              <img style={boxImage} src={this.state.activeArticle.articleImage}/>
-                <div style={imageOverlay}>
-                  <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
-                    <span style={articleTitle}>
-                      {this.state.activeArticle.articleTitle}
-                      <br/>
 
-                      {this.state.activeArticle.articleBody}
-                    </span>
-                  <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
-                </div>
-            </div>
 
           </div>
 
@@ -418,6 +452,7 @@ const storyContent={
                     <br/>
 
                     {this.state.activeArticle.articleBody}
+
                   </span>
                 <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
               </div>

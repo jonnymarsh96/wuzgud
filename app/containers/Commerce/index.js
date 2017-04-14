@@ -125,6 +125,7 @@ export default class Commerce extends React.PureComponent {
           textAlign:"center",
           width:"100%",
           marginTop:"25%",
+          backgroundImage: "linear-gradient(45deg, red, blue)"
 
         }
       const container={
@@ -270,16 +271,16 @@ export default class Commerce extends React.PureComponent {
             }
             const cyber={
               height:"40px",
-
               display:"inline-block",
               alignSelf:"center",
               margin:"20px",
-              fontSize:"1em",
+              fontSize:"3em",
               textAlign:"center",
               fontFamily:"Asset",
               color:"#85bb65",
               textShadow:"1px 2px #5f9341",
               letterSpacing:"5px",
+              fontWeight:"bolder",
 
             }
             const rightScroll={
@@ -343,7 +344,7 @@ export default class Commerce extends React.PureComponent {
                   <div style={leftNav2}><Link style={navLink} to="/">Home </Link><Link style={navLink} to="/CyberTrain"> CyberTrain </Link><Link style={navLink} to="/Commerce"> Commerce </Link>
                     <Link style={navLink} to="/Govt"> Govt </Link><Link style={navLink} to="/Jam"> Jam </Link><Link style={navLink} to="/Shop"> Shop </Link>
                   </div>
-
+                  <IconButton onTouchTap={this.handleOpen}><NewsIcon color='#F2E7AE'/></IconButton>
             </div>
           </Responsive>
 
@@ -419,7 +420,7 @@ export default class Commerce extends React.PureComponent {
 
                   <div style={content}>
                     <Paper style={paper}>
-                      <h1 style={cyber}>DEALINGS</h1>
+                      <h1 style={cyber}>Dealings</h1>
                       <p style={paperBody}>
                         Look here for all the newsest news here in local business.
                       </p>
@@ -429,6 +430,11 @@ export default class Commerce extends React.PureComponent {
                 </Responsive>
 
               <Responsive minDeviceWidth={1024}>
+              <Drawer
+                 docked={false}
+                 open={this.state.drawerOpen}
+                 onRequestChange={this.handleClose}
+                 openSecondary={true}>
                 <div style={rightScroll}>
 
                 <div style={storyContainer}>
@@ -520,6 +526,7 @@ export default class Commerce extends React.PureComponent {
                 </div><div style={storyContainer}>
                 </div>
                </div>
+               </Drawer>
               </Responsive>
 
               <Responsive maxDeviceWidth={1023}>
