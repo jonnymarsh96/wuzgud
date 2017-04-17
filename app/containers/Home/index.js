@@ -143,8 +143,8 @@ const imageOverlay={
 
   const navColumn={
     width:"100%",
-    height:"200px",
-    background:"#323232",
+    height:"150px",
+    background:"#E1E1E9",
     outline:"20px solid rgba(50, 50, 50, .5)",
     zIndex:"100",
     display:"flex",
@@ -155,32 +155,33 @@ const imageOverlay={
 
     }
       const logo={
-        width:"30%",
+        width:"35%",
         height:"0",
-        margin:"0 auto",
-        borderTop: "200px solid #D9D7BA",
-        borderLeft: "100px solid transparent",
+        margin:"0",
+        borderTop: "180px solid #F2F3F8",
+        borderLeft: "00px solid transparent",
 	      borderRight: "100px solid transparent",
         zIndex:"120",
+
 
 
       }
         const wuzGudLogo={
           fontFamily:"Modak",
-          color:"#E6BE2B",
+          color:"#009C61",
           fontSize:"3em",
-          textAlign:"center",
+          textAlign:"left",
           marginTop:"10px",
-          textShadow:"4.3px 1.5px .3px #CE4632",
+          textShadow:"4.3px 1.5px .3px #005AFF ",
           position:"absolute",
           top:"0",
           right:"0",
-          left:"0",
+          left:"100",
         }
       const leftNav={
         width:"50%",
         height:"auto",
-        marginTop:"500px",
+        marginTop:"5px",
         margin:"0 auto",
         textAlign:"center",
         lineHeight:"3.25em",
@@ -295,9 +296,10 @@ const storyContent={
           <div style={logo}>
             <div style={wuzGudLogo}>WUZ<br/>GUD
             </div>
+
+            </div>
             <div style={leftNav}><Link style={navLink} to="/">Home </Link><Link style={navLink} to="/CyberTrain"> CyberTrain </Link><Link style={navLink} to="/Commerce"> Dealings </Link>
               <Link style={navLink} to="/Govt"> Govt </Link><Link style={navLink} to="/Jam"> Jam </Link><Link style={navLink} to="/Shop"> Shop </Link>
-            </div>
           </div>
         </div>
       </Responsive>
