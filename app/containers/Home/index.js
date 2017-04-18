@@ -101,12 +101,11 @@ const imageOverlay={
         alignItems:"center",
         maxHeight:"850px",
         overflow:"hidden",
-        border:""
 
     }
     const articleBody={
       fontSize:".5em",
-      fontFamily:"Amiko",
+      fontFamily:"Nunito",
       color:"#C4C4C4",
     }
     const articleTitle={
@@ -114,9 +113,9 @@ const imageOverlay={
       fontFamily:"amiko",
       fontWeight:"bold",
       fontSize:"2em",
-      color:"#D9D7BA",
+      color:"#E1E1E9",
       textAlign:"center",
-      width:"50%",
+      width:"55%",
       height:"100%",
       position:"absolute",
       left:"-250px",
@@ -129,11 +128,11 @@ const imageOverlay={
     }
     const skewCancel={
       transform: "skewX(30deg)",
-      fontFamily:"amiko",
+      fontFamily:"Rubik Mono One",
       fontSize:"1.5em",
-      color:"#D9D7BA",
+      color:"#E1E1E9",
       marginTop:"300px",
-      right:"o"
+      right:"0"
     }
 
   const container={
@@ -155,7 +154,7 @@ const imageOverlay={
 
     }
       const logo={
-        width:"35%",
+        width:"25%",
         height:"0",
         margin:"0",
         borderTop: "180px solid #F2F3F8",
@@ -202,17 +201,17 @@ const imageOverlay={
     const contentFeild={
       width:"100%",
       height:"100vh",
-      background:"#D9D7BA",
+      background:"#C4C5C9",
       backgroundAttachment:"fixed",
-      overflow:"auto",
-      position:"absolute",
+
+
 
 
     }
 
 
       const boxStyle={
-        width:"100%",
+        width:"80%",
         margin:"0px",
         position:"relative",
         alignSelf:"center",
@@ -239,6 +238,11 @@ const imageOverlay={
 
 
       }
+      const articleBox={
+        width:"15%",
+        height:"75px",
+        background:"#ffffff",
+      }
         const content={
           fontFamily:"arial",
           color:"#ffffff",
@@ -257,21 +261,21 @@ const imageOverlay={
     }
     const storyImg={
       maxWidth:"40%",
-      height:"100px",
-      margin:"5px",
+      height:"200px",
+      margin:"0px",
 
     }
     const storyContainer={
       background:"#ffffff",
-      maxHeight:"200px",
+      maxHeight:"500px",
       padding:"15px",
       margin:"20px",
-      fontFamily:"Amiko",
-      fontSize:".75em",
+      fontFamily:"Nunito",
+      fontSize:"3em",
       textWrap:"justified",
       textAlign:"justified",
       textOverflow:"elipsis",
-      border:"1px solid #FF49D9",
+
       borderRadius:"3px",
       display:"flex",
       flexDirection:"row",
@@ -281,8 +285,7 @@ const imageOverlay={
 const storyContent={
     display:"flex",
     flexDirection:"column",
-    textAlign:"justified",
-    textOverflow:"elipsis",
+
 
 }
 
@@ -334,111 +337,75 @@ const storyContent={
             </div>
         </div>
         <div style={contentFeild}>
-          <div>
+          <div articleBox><div style={storyContainer}>
 
+            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
 
-
-          </div>
-
-            <div style={content}>
-
+            <div style={storyContent}>
+              <Link to="/CyberTrain"><h3>The Cyber Train</h3>
+              <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
+              </Link>
             </div>
 
-        </div>
-        <div style={rightScroll}>
-
-        <div style={storyContainer}>
-
-          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
-
-          <div style={storyContent}>
-            <Link style={navLink} to="/CyberTrain"><h3>The Cyber Train</h3>
-            <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
-            </Link>
           </div>
 
-        </div>
+          <div style={storyContainer}>
 
-        <div style={storyContainer}>
+            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
 
-          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
+            <div style={storyContent}>
+              <Link style={navLink} to="/Jam"><h3>JAM</h3>
+              <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
+              </Link>
+            </div>
 
-          <div style={storyContent}>
-            <Link style={navLink} to="/Jam"><h3>JAM</h3>
-            <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
-            </Link>
-          </div>
-
-        </div>
-        <div style={storyContainer}>
-
-          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
-
-          <div style={storyContent}>
-            <Link style={navLink} to="/Infrastructure">
-              <h3>Infrastructure</h3>
-              <span>Round-a-bout construction on Wheeler @ Aumond</span>
-            </Link>
-          </div>
-
-        </div>
-        <div style={storyContainer}>
-          <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
-
-          <div style={storyContent}>
-            <Link style={navLink} to="/Infrastructure">
-              <h3>Infrastructure</h3>
-              <span>New arena project slows down</span>
-            </Link>
-          </div>
-        </div>
-
-        <div style={storyContainer}>
-          <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
-          <div style={storyContent}>
-            <Link style={navLink} to="/Govt">
-              <h3>Govt</h3>
-              <span>Georgia Senate backs guns on campus, setting up final vote</span>
-            </Link>
-          </div>
-        </div>
-
-        <div style={storyContainer}>
-          <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
-          <div style={storyContent}>
-            <Link style={navLink} to="/Commerce"><h3>Commerce</h3>
-            <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
-            </Link>
-          </div>
           </div>
           <div style={storyContainer}>
+
+            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+
+            <div style={storyContent}>
+              <Link style={navLink} to="/Infrastructure">
+                <h3>Infrastructure</h3>
+                <span>Round-a-bout construction on Wheeler @ Aumond</span>
+              </Link>
+            </div>
+
           </div>
           <div style={storyContainer}>
+            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
+
+            <div style={storyContent}>
+              <Link style={navLink} to="/Infrastructure">
+                <h3>Infrastructure</h3>
+                <span>New arena project slows down</span>
+              </Link>
+            </div>
           </div>
+
           <div style={storyContainer}>
+            <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
+            <div style={storyContent}>
+              <Link style={navLink} to="/Govt">
+                <h3>Govt</h3>
+                <span>Georgia Senate backs guns on campus, setting up final vote</span>
+              </Link>
+            </div>
           </div>
+
           <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
-          </div>
-          <div style={storyContainer}>
+            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
+            <div style={storyContent}>
+              <Link style={navLink} to="/Commerce"><h3>Commerce</h3>
+              <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
+              </Link>
+            </div>
+            </div>
           </div>
 
 
         </div>
-    </Responsive>
+        </Responsive>
 
    <Responsive maxDeviceWidth={1023}>
 
