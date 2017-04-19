@@ -103,19 +103,15 @@ const imageOverlay={
         overflow:"hidden",
 
     }
-    const articleBody={
-      fontSize:".5em",
-      fontFamily:"Nunito",
-      color:"#C4C4C4",
-    }
+
     const articleTitle={
       background:"linear-gradient(to left, rgba(50, 50, 50, .3), rgba(50, 50, 50, 1))",
       fontFamily:"amiko",
       fontWeight:"bold",
       fontSize:"2em",
       color:"#E1E1E9",
-      textAlign:"center",
-      width:"55%",
+      textAlign:"right",
+      width:"65%",
       height:"100%",
       position:"absolute",
       left:"-250px",
@@ -144,7 +140,6 @@ const imageOverlay={
     width:"100%",
     height:"150px",
     background:"#E1E1E9",
-    outline:"20px solid rgba(50, 50, 50, .5)",
     zIndex:"100",
     display:"flex",
     flexDirection:"row",
@@ -212,10 +207,9 @@ const imageOverlay={
 
       const boxStyle={
         width:"80%",
-        margin:"0px",
+        margin:"0 auto",
         position:"relative",
         alignSelf:"center",
-        borderRadius:"3px",
         maxHeight:"850px",
         overflow:"hidden",
       }
@@ -239,9 +233,10 @@ const imageOverlay={
 
       }
       const articleBox={
-        width:"15%",
+        width:"25%",
         height:"75px",
         background:"#ffffff",
+
       }
         const content={
           fontFamily:"arial",
@@ -262,33 +257,78 @@ const imageOverlay={
     const storyImg={
       maxWidth:"40%",
       height:"200px",
-      margin:"0px",
+      margin:"30px",
 
     }
     const storyContainer={
       background:"#ffffff",
-      maxHeight:"500px",
-      padding:"15px",
-      margin:"20px",
+      height:"400px",
+      margin:"0 auto",
       fontFamily:"Nunito",
       fontSize:"3em",
       textWrap:"justified",
       textAlign:"justified",
       textOverflow:"elipsis",
-
+      padding:"35px",
       borderRadius:"3px",
       display:"flex",
-      flexDirection:"row",
-      whiteSpace:"normal",
+      flexDirection:"column",
+
 
     }
 const storyContent={
     display:"flex",
-    flexDirection:"column",
+    flexDirection:"row",
 
 
 }
+const blogTitle1={
+  height:"100px",
+  width:"100%",
+  fontSize:".75em",
+  color:"#323232",
+  textDecoration:"none",
+  borderBottom:"1px solid #CED1D4",
+  paddingLeft:"50px",
+  marginTop:"30px"
 
+
+}
+const blogTitle={
+  height:"100px",
+  width:"100%",
+  fontSize:".75em",
+  color:"#323232",
+  textDecoration:"none",
+  borderBottom:"1px solid #CED1D4",
+  paddingLeft:"50px",
+  marginTop:"30px"
+
+}
+const articleBody={
+  fontFamily:"Amiko",
+  fontSize:".5em",
+  color:"#323232",
+  textDecoration:"none",
+  padding:"50px",
+
+
+}
+const knowWhat={
+  height:"200px",
+  width:"100%",
+  fontSize:"2em",
+  fontFamily:"Amiko",
+  textAlign:"center",
+  paddingTop:"150px",
+  fontWeight:"bold",
+  background:"#ffffff",
+  color:"#3D82D4",
+  wordSpacing:".5em",
+  letterSpacing:".2em",
+  paddingBottom:"150px",
+
+}
     return (
       <div >
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
@@ -320,8 +360,15 @@ const storyContent={
       </Responsive>
 
       <Responsive minDeviceWidth={1024} style={container}>
+
+
+
+
         <div style={boxStyle}>
+
+
           <img style={boxImage} src={this.state.activeArticle.articleImage}/>
+
             <div style={imageOverlay}>
               <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
 
@@ -336,75 +383,135 @@ const storyContent={
               <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
             </div>
         </div>
-        <div style={contentFeild}>
-          <div articleBox><div style={storyContainer}>
 
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
+
+        <div style={knowWhat}>
+          <span>
+            KNOW WHATS GUD.
+          </span>
+        </div>
+
+        <div style={contentFeild}>
+
+
+
+
+          <div style={storyContainer}>
+
+            <Link style={blogTitle1} to="/CyberTrain">
+              <h3>The Cyber Train</h3>
+            </Link>
+
+
 
             <div style={storyContent}>
-              <Link to="/CyberTrain"><h3>The Cyber Train</h3>
-              <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
+              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
+
+              <Link style={articleBody} to="/CyberTrain">
+                <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
               </Link>
             </div>
 
           </div>
 
+
           <div style={storyContainer}>
 
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
+            <Link style={blogTitle} to="/Jam">
+              <h3>Jam</h3>
+            </Link>
+
+
 
             <div style={storyContent}>
-              <Link style={navLink} to="/Jam"><h3>JAM</h3>
+              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
+
+              <Link style={articleBody} to="/Jam">
               <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
               </Link>
             </div>
 
           </div>
+
+
           <div style={storyContainer}>
 
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+            <Link style={blogTitle} to="/Infrastructure">
+            <h3>Infrastructure</h3>
+            </Link>
+
+
 
             <div style={storyContent}>
-              <Link style={navLink} to="/Infrastructure">
-                <h3>Infrastructure</h3>
-                <span>Round-a-bout construction on Wheeler @ Aumond</span>
+            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+              <Link style={articleBody} to="/Infrastructure">
+                <span>Round-a-bout construction on Wheeler @ Aumond.</span>
               </Link>
+
             </div>
 
           </div>
+
+
           <div style={storyContainer}>
-            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
+
+          <Link style={blogTitle} to="/Infrastructure">
+            <h3>Infrastructure</h3>
+          </Link>
+
+
 
             <div style={storyContent}>
-              <Link style={navLink} to="/Infrastructure">
-                <h3>Infrastructure</h3>
+              <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
+              <Link style={articleBody} to="/Infrastructure">
+
                 <span>New arena project slows down</span>
               </Link>
+
             </div>
+
           </div>
 
+
           <div style={storyContainer}>
-            <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
+
+          <Link style={blogTitle} to="/Govt">
+            <h3>Govt</h3>
+            </Link>
+
+
+
             <div style={storyContent}>
-              <Link style={navLink} to="/Govt">
-                <h3>Govt</h3>
+              <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
+              <Link style={articleBody} to="/Govt">
                 <span>Georgia Senate backs guns on campus, setting up final vote</span>
               </Link>
+
             </div>
+
           </div>
 
           <div style={storyContainer}>
-            <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
+
+            <Link style={blogTitle} to="/Commerce">
+              <h3>Commerce</h3>
+            </Link>
+
+
+
             <div style={storyContent}>
-              <Link style={navLink} to="/Commerce"><h3>Commerce</h3>
+              <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
+              <Link style={articleBody} to="/Commerce">
               <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
               </Link>
+
             </div>
+
             </div>
+
           </div>
 
 
-        </div>
         </Responsive>
 
    <Responsive maxDeviceWidth={1023}>

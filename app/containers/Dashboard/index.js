@@ -64,7 +64,7 @@ storeArticle = () => {
       alert("success");
     }
     else if(json.error){
-    alert("error");
+    alert(json.error);
     }
   })
 
