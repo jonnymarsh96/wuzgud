@@ -170,7 +170,7 @@ const imageOverlay={
           position:"absolute",
           top:"0",
           right:"0",
-          left:"100",
+          left:"0",
         }
       const leftNav={
         width:"50%",
@@ -195,7 +195,6 @@ const imageOverlay={
         }
     const contentFeild={
       width:"100%",
-      height:"100vh",
       background:"#C4C5C9",
       backgroundAttachment:"fixed",
 
@@ -268,7 +267,7 @@ const imageOverlay={
       fontSize:"3em",
       textWrap:"justified",
       textAlign:"justified",
-      textOverflow:"elipsis",
+      textOverflow:"hidden",
       padding:"35px",
       borderRadius:"3px",
       display:"flex",
@@ -329,6 +328,44 @@ const knowWhat={
   paddingBottom:"150px",
 
 }
+const loveThe={
+  height:"200px",
+  width:"100%",
+  fontSize:"2em",
+  fontFamily:"Amiko",
+  textAlign:"center",
+  fontWeight:"bold",
+  background:"#ffffff",
+  color:"#3D82D4",
+  wordSpacing:".5em",
+  letterSpacing:".2em",
+  paddingTop:"150px",
+  paddingBottom:"150px",
+}
+const theWuz={
+  height:"700px",
+  width:"100%",
+  background:"#ffffff",
+
+}
+const razDaz={
+  margin:"auto",
+
+  maxWidth:"60%"
+}
+const signUp={
+
+}
+const signIn={
+
+}
+const email={
+
+}
+const password={
+
+}
+ //BILL MURRAY AWESOMENESS *http://img.pandawhale.com/post-59658-razzle-dazzle-gif-Imgur-Bill-M-Ort8.gif*
     return (
       <div >
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
@@ -360,12 +397,7 @@ const knowWhat={
       </Responsive>
 
       <Responsive minDeviceWidth={1024} style={container}>
-
-
-
-
         <div style={boxStyle}>
-
 
           <img style={boxImage} src={this.state.activeArticle.articleImage}/>
 
@@ -510,123 +542,171 @@ const knowWhat={
             </div>
 
           </div>
-
-
+          <div style={loveThe}>
+            LOVE THE WUZ.
+          </div>
+          <div style={theWuz}><img style={razDaz} src="http://img.pandawhale.com/post-59658-razzle-dazzle-gif-Imgur-Bill-M-Ort8.gif"/></div>
         </Responsive>
 
-   <Responsive maxDeviceWidth={1023}>
 
-      <div style={contentFeild}>
-        <div>
 
+
+
+
+
+
+
+        <Responsive maxDeviceWidth={1023} style={container}>
           <div style={boxStyle}>
+
             <img style={boxImage} src={this.state.activeArticle.articleImage}/>
+
               <div style={imageOverlay}>
                 <IconButton onTouchTap={this.previousArticle}><ChevLeft color="#ffffff"/></IconButton>
+
                   <span style={articleTitle}>
-                    {this.state.activeArticle.articleTitle}
-                    <br/>
+                    <p style={skewCancel}>
+                      {this.state.activeArticle.articleTitle}
+                      <br/>
 
-                    {this.state.activeArticle.articleBody}
-
+                      <p style={articleBody}>{this.state.activeArticle.articleBody}</p>
+                    </p>
                   </span>
                 <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
               </div>
           </div>
 
-        </div>
 
-          <div style={content}>
-
+          <div style={knowWhat}>
+            <span>
+              KNOW WHATS GUD.
+            </span>
           </div>
 
-      </div>
-      <div style={rightScroll}>
-
-        <div style={storyContainer}>
-
-          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
-
-          <div style={storyContent}>
-            <h3>Infrastructure</h3>
-            <span>Round-a-bout construction on Wheeler @ Aumond</span>
-          </div>
-
-        </div>
-        <div style={storyContainer}>
-
-          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
-
-          <div style={storyContent}>
-            <Link style={navLink} to="/CyberTrain"><h3>The Cyber Train</h3>
-            <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span></Link>
-          </div>
-
-        </div>
-
-        <div style={storyContainer}>
-
-          <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
-
-          <div style={storyContent}>
-            <h3>JAM</h3>
-            <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
-          </div>
-
-        </div>
-
-        <div style={storyContainer}>
-          <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
-
-          <div style={storyContent}>
-            <h3>Infrastructure</h3>
-            <span>New arena project slows down</span>
-          </div>
-        </div>
-
-        <div style={storyContainer}>
-          <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
-          <div style={storyContent}>
-            <h3>Govt</h3>
-            <span>Georgia Senate backs guns on campus, setting up final vote</span>
-          </div>
-        </div>
-
-        <div style={storyContainer}>
-          <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
-          <div style={storyContent}>
-            <h3>Commerce</h3>
-            <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
-          </div>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-        <div style={storyContainer}>
-        </div>
-      </div>
+          <div style={contentFeild}>
 
 
-  </Responsive>
+
+
+            <div style={storyContainer}>
+
+              <Link style={blogTitle1} to="/CyberTrain">
+                <h3>The Cyber Train</h3>
+              </Link>
+
+
+
+              <div style={storyContent}>
+                <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
+
+                <Link style={articleBody} to="/CyberTrain">
+                  <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
+                </Link>
+              </div>
+
+            </div>
+
+
+            <div style={storyContainer}>
+
+              <Link style={blogTitle} to="/Jam">
+                <h3>Jam</h3>
+              </Link>
+
+
+
+              <div style={storyContent}>
+                <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
+
+                <Link style={articleBody} to="/Jam">
+                <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
+                </Link>
+              </div>
+
+            </div>
+
+
+            <div style={storyContainer}>
+
+              <Link style={blogTitle} to="/Infrastructure">
+              <h3>Infrastructure</h3>
+              </Link>
+
+
+
+              <div style={storyContent}>
+              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+                <Link style={articleBody} to="/Infrastructure">
+                  <span>Round-a-bout construction on Wheeler @ Aumond.</span>
+                </Link>
+
+              </div>
+
+            </div>
+
+
+            <div style={storyContainer}>
+
+            <Link style={blogTitle} to="/Infrastructure">
+              <h3>Infrastructure</h3>
+            </Link>
+
+
+
+              <div style={storyContent}>
+                <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
+                <Link style={articleBody} to="/Infrastructure">
+
+                  <span>New arena project slows down</span>
+                </Link>
+
+              </div>
+
+            </div>
+
+
+            <div style={storyContainer}>
+
+            <Link style={blogTitle} to="/Govt">
+              <h3>Govt</h3>
+              </Link>
+
+
+
+              <div style={storyContent}>
+                <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
+                <Link style={articleBody} to="/Govt">
+                  <span>Georgia Senate backs guns on campus, setting up final vote</span>
+                </Link>
+
+              </div>
+
+            </div>
+
+            <div style={storyContainer}>
+
+              <Link style={blogTitle} to="/Commerce">
+                <h3>Commerce</h3>
+              </Link>
+
+
+
+              <div style={storyContent}>
+                <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
+                <Link style={articleBody} to="/Commerce">
+                <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
+                </Link>
+
+              </div>
+
+              </div>
+
+            </div>
+            <div style={loveThe}>
+              LOVE THE WUZ.
+            </div>
+            <div style={theWuz}><img style={razDaz} src="http://img.pandawhale.com/post-59658-razzle-dazzle-gif-Imgur-Bill-M-Ort8.gif"/></div>
+          </Responsive>
   </div>
     );
   }

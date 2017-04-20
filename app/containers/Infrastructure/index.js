@@ -251,6 +251,8 @@ export default class Infrastructure extends React.PureComponent {
 
     }
 
+    const cyber ={};
+
 
     return (
         <div style={container}>
