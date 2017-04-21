@@ -111,7 +111,7 @@ const imageOverlay={
       fontSize:"2em",
       color:"#E1E1E9",
       textAlign:"right",
-      width:"65%",
+      width:"55%",
       height:"100%",
       position:"absolute",
       left:"-250px",
@@ -149,10 +149,10 @@ const imageOverlay={
 
     }
       const logo={
-        width:"25%",
+        width:"15%",
         height:"0",
         margin:"0",
-        borderTop: "180px solid #F2F3F8",
+        borderTop: "150px solid #F2F3F8",
         borderLeft: "00px solid transparent",
 	      borderRight: "100px solid transparent",
         zIndex:"120",
