@@ -27,7 +27,7 @@ export default class SignIn extends React.PureComponent {
     })
   }
 
-  signUp = () => {
+  signIn = () => {
     var data = new FormData();
     data.append("email", this.state.email);
     data.append("password", this.state.password);
@@ -55,7 +55,7 @@ export default class SignIn extends React.PureComponent {
         <Helmet title="SignIn" meta={[ { name: 'description', content: 'Description of SignIn' }]}/>
         <input onChange={this.handleEmail} value={this.state.email} type="text" placeholder="Email" />
         <input onChange={this.handlePassword} value={this.state.password} type="text" placeholder="Password" />
-        <input type="Sign In" onTouchTap={this.signUp}/>
+        <input type="submit" value="Sign In" onTouchTap={this.signIn}/>
         <img src={this.state.preview}/>
 
       </div>

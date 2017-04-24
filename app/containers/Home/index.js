@@ -148,6 +148,9 @@ const imageOverlay={
 
 
     }
+    const topBar={
+
+    }
       const logo={
         width:"15%",
         height:"0",
@@ -388,6 +391,9 @@ const password={
         <div style={navColumn}>
           <div style={logo}>
             <div style={wuzGudLogo}>WUZ<br/>GUD
+            </div>
+            <div style={topBar}>
+
             </div>
             <div style={leftNav}><Link style={navLink} to="/">Home</Link><br/><Link style={navLink} to="/CyberTrain">The Cyber Train</Link><br/><Link style={navLink} to="/Commerce">Commerce</Link><br/>
               <Link style={navLink} to="/Govt">Govt</Link><br/><Link style={navLink} to="/Jam">Jam</Link><br/><Link style={navLink} to="/Shop">Shop</Link>
