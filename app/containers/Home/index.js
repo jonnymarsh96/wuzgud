@@ -200,6 +200,8 @@ const imageOverlay={
       width:"100%",
       background:"#C4C5C9",
       backgroundAttachment:"fixed",
+      display:"flex",
+      flexDirection:"row"
 
 
 
@@ -257,9 +259,9 @@ const imageOverlay={
       marginLeft:"75%",
     }
     const storyImg={
-      maxWidth:"40%",
+      maxWidth:"45%",
       height:"200px",
-      margin:"30px",
+      margin:"10px",
 
     }
     const storyContainer={
@@ -268,8 +270,8 @@ const imageOverlay={
       margin:"0 auto",
       fontFamily:"Nunito",
       fontSize:"3em",
-      textWrap:"justified",
-      textAlign:"justified",
+
+      textAlign:"center",
       textOverflow:"hidden",
       padding:"35px",
       borderRadius:"3px",
@@ -280,8 +282,8 @@ const imageOverlay={
     }
 const storyContent={
     display:"flex",
-    flexDirection:"row",
-
+    flexDirection:"column",
+    alignItems:"center",
 
 }
 const blogTitle1={
@@ -303,7 +305,7 @@ const blogTitle={
   color:"#323232",
   textDecoration:"none",
   borderBottom:"1px solid #CED1D4",
-  paddingLeft:"50px",
+
   marginTop:"30px"
 
 }
@@ -344,6 +346,11 @@ const loveThe={
   letterSpacing:".2em",
   paddingTop:"150px",
   paddingBottom:"150px",
+  display:"flex",
+  flexDirection:"column",
+  alignItems:"center",
+  marginTop:"30px",
+
 }
 const theWuz={
   height:"700px",
@@ -491,24 +498,7 @@ const password={
           </div>
 
 
-          <div style={storyContainer}>
 
-          <Link style={blogTitle} to="/Infrastructure">
-            <h3>Infrastructure</h3>
-          </Link>
-
-
-
-            <div style={storyContent}>
-              <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1829782_web1_James-Brown-Arena-3.jpg?itok=NlrqPkpA"/>
-              <Link style={articleBody} to="/Infrastructure">
-
-                <span>New arena project slows down</span>
-              </Link>
-
-            </div>
-
-          </div>
 
 
           <div style={storyContainer}>
