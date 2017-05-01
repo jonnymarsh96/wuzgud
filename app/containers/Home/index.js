@@ -101,6 +101,7 @@ const imageOverlay={
         alignItems:"center",
         maxHeight:"850px",
         overflow:"hidden",
+        marginTop:"30px",
 
     }
 
@@ -132,14 +133,16 @@ const imageOverlay={
     }
 
   const container={
-
+    width:"100%",
+    height:"900px",
+    background:"#969696"
 
   }
 
   const navColumn={
     width:"100%",
     height:"150px",
-    background:"#E1E1E9",
+    background:"#141414",
     zIndex:"100",
     display:"flex",
     flexDirection:"row",
@@ -152,19 +155,21 @@ const imageOverlay={
 
     }
       const logo={
-        width:"15%",
-        height:"0",
-        margin:"0",
-        borderTop: "150px solid #F2F3F8",
-        borderLeft: "00px solid transparent",
-	      borderRight: "100px solid transparent",
+
+        width:"10%",
+        height:"200px",
+        marginLeft:"20px",
+        background:"#000000",
+        borderRadius:"5px",
         zIndex:"120",
+
 
 
 
       }
         const wuzGudLogo={
           fontFamily:"Modak",
+          backgroundImage:"",
           color:"#009C61",
           fontSize:"3em",
           textAlign:"left",
@@ -176,16 +181,16 @@ const imageOverlay={
           left:"0",
         }
       const leftNav={
-        width:"50%",
+        width:"100%",
         height:"auto",
         marginTop:"5px",
         margin:"0 auto",
-        textAlign:"center",
-        lineHeight:"3.25em",
-        color:"#323232",
+        textAlign:"right",
+
+        color:"#404547",
         fontFamily:"Amiko",
         fontSize:".8em",
-        wordSpacing:"2em",
+
 
       }
         const navLink={
@@ -194,7 +199,7 @@ const imageOverlay={
           color:"#323232",
           textDecoration:"none",
           fontWeight:"bold",
-          wordSpacing:"7em"
+
         }
     const contentFeild={
       width:"100%",
@@ -216,11 +221,14 @@ const imageOverlay={
         alignSelf:"center",
         maxHeight:"850px",
         overflow:"hidden",
+        paddingTop:"30px",
+        borderRadius:"10px",
       }
       const boxImage={
         width:"100%",
         height:"100%",
         margin:"0 auto",
+        paddingTop:"30px",
 
 
       }
@@ -264,9 +272,10 @@ const imageOverlay={
       margin:"10px",
 
     }
+
     const storyContainer={
-      background:"#ffffff",
-      height:"400px",
+      background:"#141414",
+      height:"600px",
       margin:"0 auto",
       fontFamily:"Nunito",
       fontSize:"3em",
@@ -284,29 +293,117 @@ const storyContent={
     display:"flex",
     flexDirection:"column",
     alignItems:"center",
+    height:"300px",
+    width:"17%",
+    textOverflow:"hidden",
 
 }
-const blogTitle1={
+const storyImgC={
+  maxWidth:"100%",
+  height:"400px",
+  margin:"0px",
+  overflow:"hidden",
+  borderBottom:"5px solid #054661",
+}
+const blogTitleC={
+  fontFamily:"Amiko",
+  fontWeight:"bold",
+  textAlign:"right",
+  height:"100px",
+  width:"100%",
+  fontSize:".5em",
+  color:"#E3E3E3",
+  textDecoration:"none",
+  paddingLeft:"50px",
+  marginTop:"5px"
+}
+
+const storyImgJ={
+  maxWidth:"100%",
+  height:"400px",
+  margin:"0px",
+  overflow:"hidden",
+  borderBottom:"5px solid #4D4078",
+}
+const blogTitleJ={
+  fontFamily:"Amiko",
+  fontWeight:"bold",
+  textAlign:"right",
+  height:"100px",
+  width:"100%",
+  fontSize:".5em",
+  color:"#E3E3E3",
+  textDecoration:"none",
+  paddingLeft:"50px",
+  marginTop:"5px"
+}
+
+const blogTitleD={
   height:"100px",
   width:"100%",
   fontSize:".75em",
-  color:"#323232",
+  color:"#E3E3E3",
   textDecoration:"none",
-  borderBottom:"1px solid #CED1D4",
-  paddingLeft:"50px",
+  borderBottom:"3px solid #478B1A",
+
   marginTop:"30px"
 
+}
+const blogTitleG={
+  height:"100px",
+  width:"100%",
+  fontSize:".75em",
+  color:"#E3E3E3",
+  textDecoration:"none",
+  borderBottom:"3px solid #610315",
+
+  marginTop:"30px"
 
 }
 const blogTitle={
   height:"100px",
   width:"100%",
   fontSize:".75em",
-  color:"#323232",
+  color:"#E3E3E3",
   textDecoration:"none",
-  borderBottom:"1px solid #CED1D4",
+  borderBottom:"3px solid #CED1D4",
 
   marginTop:"30px"
+
+}
+const blogLink={
+  fontSize:".4em",
+  textAlign:"right",
+  color:"#70797D",
+  fontWeight:"bold",
+
+}
+const blogLinkC={
+  fontSize:".4em",
+  textAlign:"right",
+  color:"#054661",
+  fontWeight:"bold",
+
+}
+const blogLinkJ={
+  fontSize:".4em",
+  textAlign:"right",
+  color:"#4D4078",
+  fontWeight:"bold",
+
+}
+const blogLinkD={
+  fontSize:".4em",
+  textAlign:"right",
+  color:"#478B1A",
+  fontWeight:"bold",
+
+}
+const blogLinkG={
+  fontSize:".4em",
+  textAlign:"right",
+  color:"#610315",
+  fontWeight:"bold",
 
 }
 const articleBody={
@@ -314,25 +411,28 @@ const articleBody={
   fontSize:".5em",
   color:"#323232",
   textDecoration:"none",
-  padding:"50px",
+  padding:"30px",
 
 
 }
 const knowWhat={
   height:"200px",
   width:"100%",
-  fontSize:"2em",
+  fontSize:"2.5em",
   fontFamily:"Amiko",
   textAlign:"center",
   paddingTop:"150px",
   fontWeight:"bold",
-  background:"#ffffff",
+  background:"#969696",
   color:"#3D82D4",
   wordSpacing:".5em",
   letterSpacing:".2em",
   paddingBottom:"150px",
+  lineSpacing:"3em",
+  paddingBottom:"250px",
 
 }
+
 const loveThe={
   height:"200px",
   width:"100%",
@@ -353,6 +453,7 @@ const loveThe={
 
 }
 const theWuz={
+  marginTop: "50px",
   height:"700px",
   width:"100%",
   background:"#ffffff",
@@ -360,8 +461,9 @@ const theWuz={
 }
 const razDaz={
   margin:"auto",
-
-  maxWidth:"60%"
+  display:"flex",
+  alignItems:"center",
+  maxWidth:"60%",
 }
 const signUp={
 
@@ -384,7 +486,7 @@ const password={
 
         <div style={navColumn}>
           <div style={logo}>
-            <div style={wuzGudLogo}>WUZ<br/>GUD
+            <div style={wuzGudLogo}><img style={storyImg} src="ACFrOgBqxOmI2cjtdQ-06mnzn0Pu0ubRZeg7Nl1uJ2t4J2-LUmnBUr7T-MN3JqL6ANIs3e0wTFQyzXoqiIpnhkH3a_65ARAGVhcI3PxPZElPKPZNYqqWDk3VsLuAPlM="/>
             </div>
 
             </div>
@@ -397,7 +499,7 @@ const password={
       <Responsive maxDeviceWidth={1023}>
         <div style={navColumn}>
           <div style={logo}>
-            <div style={wuzGudLogo}>WUZ<br/>GUD
+            <div style={wuzGudLogo}><img style={storyImg} src="http://localhost:8000/WGLOGO.jpg"/>
             </div>
             <div style={topBar}>
 
@@ -431,8 +533,8 @@ const password={
 
 
         <div style={knowWhat}>
-          <span>
-            KNOW WHATS GUD.
+          <span style={{color:"#CCC20C"}}>
+          WUZ GUD</span><br/><span>AUGUSTA?
           </span>
         </div>
 
@@ -443,45 +545,46 @@ const password={
 
           <div style={storyContainer}>
 
-            <Link style={blogTitle1} to="/CyberTrain">
-              <h3>The Cyber Train</h3>
-            </Link>
 
 
+            <img style={storyImgC} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
 
             <div style={storyContent}>
-              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/16797120_1787054604890866_5798852822789312024_o.jpg?oh=cc17569128c9e869d241e4a4d2b94519&oe=59623C06"/>
+
+              <h3 style={blogTitleC}>CyberTrain</h3>
+
 
               <Link style={articleBody} to="/CyberTrain">
                 <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
               </Link>
+
             </div>
+            <Link style={blogLinkC}>CyberTrain..</Link>
 
           </div>
 
 
           <div style={storyContainer}>
 
-            <Link style={blogTitle} to="/Jam">
-              <h3>Jam</h3>
-            </Link>
 
+            <img style={storyImgJ} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
 
 
             <div style={storyContent}>
-              <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/17390681_1061725620599626_6413932256641965317_o.jpg?oh=71be93b4f5deb33ad3fd2266720b661c&oe=596DFB93"/>
 
+              <h3 style={blogTitleJ}>Jam</h3>
               <Link style={articleBody} to="/Jam">
               <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
               </Link>
             </div>
+            <Link style={blogLinkJ}>Jam..</Link>
 
           </div>
 
 
           <div style={storyContainer}>
 
-            <Link style={blogTitle} to="/Infrastructure">
+            <Link style={blogTitleG} to="/Infrastructure">
             <h3>Infrastructure</h3>
             </Link>
 
@@ -494,7 +597,7 @@ const password={
               </Link>
 
             </div>
-
+            <Link style={blogLinkG}>Inf..</Link>
           </div>
 
 
@@ -516,12 +619,13 @@ const password={
               </Link>
 
             </div>
-
+            <Link style={blogLink}>Gov't..</Link>
           </div>
+
 
           <div style={storyContainer}>
 
-            <Link style={blogTitle} to="/Commerce">
+            <Link style={blogTitleD} to="/Commerce">
               <h3>Commerce</h3>
             </Link>
 
@@ -534,7 +638,7 @@ const password={
               </Link>
 
             </div>
-
+            <Link style={blogLinkD}>Dealings..</Link>
             </div>
 
           </div>
@@ -586,7 +690,7 @@ const password={
 
             <div style={storyContainer}>
 
-              <Link style={blogTitle1} to="/CyberTrain">
+              <Link style={blogTitleC} to="/CyberTrain">
                 <h3>The Cyber Train</h3>
               </Link>
 
@@ -605,7 +709,7 @@ const password={
 
             <div style={storyContainer}>
 
-              <Link style={blogTitle} to="/Jam">
+              <Link style={blogTitleJ} to="/Jam">
                 <h3>Jam</h3>
               </Link>
 
@@ -624,7 +728,7 @@ const password={
 
             <div style={storyContainer}>
 
-              <Link style={blogTitle} to="/Infrastructure">
+              <Link style={blogTitleG} to="/Infrastructure">
               <h3>Infrastructure</h3>
               </Link>
 
@@ -643,7 +747,7 @@ const password={
 
             <div style={storyContainer}>
 
-            <Link style={blogTitle} to="/Infrastructure">
+            <Link style={blogTitleG} to="/Infrastructure">
               <h3>Infrastructure</h3>
             </Link>
 
@@ -663,7 +767,7 @@ const password={
 
             <div style={storyContainer}>
 
-            <Link style={blogTitle} to="/Govt">
+            <Link style={blogTitleG} to="/Govt">
               <h3>Govt</h3>
               </Link>
 
@@ -681,8 +785,8 @@ const password={
 
             <div style={storyContainer}>
 
-              <Link style={blogTitle} to="/Commerce">
-                <h3>Commerce</h3>
+              <Link style={blogTitleD} to="/Commerce">
+                <h3>Dealings</h3>
               </Link>
 
 
