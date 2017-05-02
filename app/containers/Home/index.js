@@ -101,7 +101,7 @@ const imageOverlay={
         alignItems:"center",
         maxHeight:"850px",
         overflow:"hidden",
-        marginTop:"30px",
+        paddingTop:"0px",
 
     }
 
@@ -156,9 +156,9 @@ const imageOverlay={
     }
       const logo={
 
-        width:"10%",
-        height:"200px",
-        marginLeft:"20px",
+        width:"15%",
+        height:"250px",
+        marginLeft:"10px",
         background:"#000000",
         borderRadius:"5px",
         zIndex:"120",
@@ -203,7 +203,7 @@ const imageOverlay={
         }
     const contentFeild={
       width:"100%",
-      background:"#C4C5C9",
+      background:"#F5F5F5",
       backgroundAttachment:"fixed",
       display:"flex",
       flexDirection:"row"
@@ -221,15 +221,36 @@ const imageOverlay={
         alignSelf:"center",
         maxHeight:"850px",
         overflow:"hidden",
-        paddingTop:"30px",
-        borderRadius:"10px",
+        paddingTop:"0px",
+        borderRadius:"5px",
       }
       const boxImage={
         width:"100%",
         height:"100%",
         margin:"0 auto",
-        paddingTop:"30px",
+        paddingTop:"0px",
 
+
+      }
+      const dotContainer={
+        position:"absolute",
+        background:"transparent",
+        left:"0",
+        right:"0",
+        bottom:"0",
+        margin:"0 auto",
+        zIndex:"999999",
+        height:"200px",
+        width:"200px",
+        display:"flex",
+        flexDirection:"row",
+        justifyContent:"space-around"
+      }
+      const dot={
+        width:"30px",
+        height:"30px",
+        borderRadius:"50%",
+        background:"#000000",
 
       }
       const paper={
@@ -260,30 +281,29 @@ const imageOverlay={
     const rightScroll={
       width:"25%",
       height:"100vh",
-      background:"#437336",
+      background:"#969696",
       border:"2px solid #FFFFFF",
       overflow:"auto",
       positon:"absolute",
       marginLeft:"75%",
     }
-    const storyImg={
-      maxWidth:"45%",
-      height:"200px",
-      margin:"10px",
 
-    }
 
     const storyContainer={
       background:"#141414",
       height:"600px",
-      margin:"0 auto",
+      width:"370px",
+      margin:"40 auto",
       fontFamily:"Nunito",
       fontSize:"3em",
-
-      textAlign:"center",
+      overflow:"hidden",
+      marginRight:"15px",
+      marginLeft:"15px",
+      marginBottom:"30px",
+      marginTop:"30px",
       textOverflow:"hidden",
-      padding:"35px",
-      borderRadius:"3px",
+
+      borderRadius:"10px",
       display:"flex",
       flexDirection:"column",
 
@@ -296,6 +316,7 @@ const storyContent={
     height:"300px",
     width:"17%",
     textOverflow:"hidden",
+
 
 }
 const storyImgC={
@@ -344,32 +365,57 @@ const blogTitleD={
   fontSize:".75em",
   color:"#E3E3E3",
   textDecoration:"none",
-  borderBottom:"3px solid #478B1A",
+
 
   marginTop:"30px"
 
+}
+const storyImgD={
+  maxWidth:"100%",
+  height:"400px",
+  margin:"0px",
+  overflow:"hidden",
+  borderBottom:"5px solid #478B1A",
+}
+const storyImgG={
+  width:"100%",
+  height:"400px",
+  margin:"0px",
+  overflow:"hidden",
+  borderBottom:"5px solid #610315",
 }
 const blogTitleG={
   height:"100px",
   width:"100%",
-  fontSize:".75em",
+  fontWeight:"bold",
+  fontSize:".5em",
+  fontFamily:"Amiko",
   color:"#E3E3E3",
   textDecoration:"none",
-  borderBottom:"3px solid #610315",
-
-  marginTop:"30px"
+  marginTop:"5px",
+  paddingLeft:"50px",
 
 }
 const blogTitle={
+
+  color:"#E3E3E3",
+  fontFamily:"Amiko",
+  fontWeight:"bold",
+  textAlign:"right",
   height:"100px",
   width:"100%",
-  fontSize:".75em",
-  color:"#E3E3E3",
+  fontSize:".5em",
   textDecoration:"none",
-  borderBottom:"3px solid #CED1D4",
+  paddingLeft:"50px",
+  marginTop:"5px"
 
-  marginTop:"30px"
-
+}
+const storyImg={
+  maxWidth:"100%",
+  height:"400px",
+  margin:"0px",
+  overflow:"hidden",
+  borderBottom:"5px solid #CED1D4",
 }
 const blogLink={
   fontSize:".4em",
@@ -423,8 +469,8 @@ const knowWhat={
   textAlign:"center",
   paddingTop:"150px",
   fontWeight:"bold",
-  background:"#969696",
-  color:"#3D82D4",
+  background:"#D1D1D1",
+  color:"#ffffff",
   wordSpacing:".5em",
   letterSpacing:".2em",
   paddingBottom:"150px",
@@ -469,12 +515,6 @@ const signUp={
 
 }
 const signIn={
-
-}
-const email={
-
-}
-const password={
 
 }
  //BILL MURRAY AWESOMENESS *http://img.pandawhale.com/post-59658-razzle-dazzle-gif-Imgur-Bill-M-Ort8.gif*
@@ -529,6 +569,18 @@ const password={
                 </span>
               <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
             </div>
+            <div style={dotContainer}>
+              <div style={dot}>
+
+              </div>
+              <div style={dot}>
+
+              </div>
+              <div style={dot}>
+
+              </div>
+            </div>
+
         </div>
 
 
@@ -584,20 +636,16 @@ const password={
 
           <div style={storyContainer}>
 
-            <Link style={blogTitleG} to="/Infrastructure">
-            <h3>Infrastructure</h3>
-            </Link>
-
-
+            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
 
             <div style={storyContent}>
-            <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
+              <h3 style={blogTitle} >Infrastructure</h3>
               <Link style={articleBody} to="/Infrastructure">
                 <span>Round-a-bout construction on Wheeler @ Aumond.</span>
               </Link>
 
             </div>
-            <Link style={blogLinkG}>Inf..</Link>
+            <Link style={blogLink}>Inf..</Link>
           </div>
 
 
@@ -606,14 +654,11 @@ const password={
 
           <div style={storyContainer}>
 
-          <Link style={blogTitle} to="/Govt">
-            <h3>Govt</h3>
-            </Link>
 
 
-
+            <img style={storyImgG} src="https://images.travelpod.com/tripwow/photos/ta-00c5-9bd2-5ed2/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
             <div style={storyContent}>
-              <img style={storyImg} src="http://dianneprimavera.org/wp-content/uploads/2014/04/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
+              <h3 style={blogTitleG}>Govt</h3>
               <Link style={articleBody} to="/Govt">
                 <span>Georgia Senate backs guns on campus, setting up final vote</span>
               </Link>
@@ -625,14 +670,13 @@ const password={
 
           <div style={storyContainer}>
 
-            <Link style={blogTitleD} to="/Commerce">
-              <h3>Commerce</h3>
-            </Link>
 
 
+            <img style={storyImgD} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
 
             <div style={storyContent}>
-              <img style={storyImg} src="http://chronicle.augusta.com/sites/default/files/styles/slideshow__640x360/public/images/1839227_web1_AugustaExchangeNewStoresfile.jpg?itok=Y7D1ze7q"/>
+
+              <h3 style={blogTitleG}>Dealings</h3>
               <Link style={articleBody} to="/Commerce">
               <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
               </Link>
