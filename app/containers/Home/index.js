@@ -55,11 +55,11 @@ export default class Home extends React.PureComponent {
   nextArticle = () =>{
     var active=this.state.active;
     var next = active+1;
-    if(next > this.state.data.length) {
+    if(next > this.state.data.length-1) {
       next = 0;
     }
 
-    for(var i = 0; i<this.state.data.length; i++){
+    for(var i = 0; i<=this.state.data.length-1; i++){
       if(i == next){
         this.setState({
           activeArticle:this.state.data[i]
@@ -70,6 +70,7 @@ export default class Home extends React.PureComponent {
     this.setState({
       active:next
     })
+
   }
   previousArticle =() =>{
     var active=this.state.active;
@@ -86,6 +87,72 @@ export default class Home extends React.PureComponent {
     }
     this.setState({
       active:prev
+    })
+  }
+  renderDots=()=>{
+    const dotContainer={
+      position:"absolute",
+      background:"transparent",
+      left:"0",
+      right:"0",
+      bottom:"0",
+      margin:"0 auto",
+      zIndex:"999999",
+      height:"200px",
+      width:"200px",
+      display:"flex",
+      flexDirection:"row",
+      justifyContent:"space-around"
+    }
+    const dot={
+      width:"30px",
+      height:"30px",
+      borderRadius:"50%",
+      border:"3px solid #000000",
+
+    }
+    const active={
+      width:"30px",
+      height:"30px",
+      borderRadius:"50%",
+      background:"#000000",
+    }
+
+    if(this.state.active === 0){
+      return(
+        <div style={dotContainer}>
+          <div style={active} onTouchTap={()=>this.setActive(0)}></div>
+          <div style={dot} onTouchTap={()=>this.setActive(1)}></div>
+          <div style={dot} onTouchTap={()=>this.setActive(2)}></div>
+        </div>
+      )
+    }
+    else if(this.state.active === 1){
+      return(
+        <div style={dotContainer}>
+          <div style={dot} onTouchTap={()=>this.setActive(0)}></div>
+          <div style={active} onTouchTap={()=>this.setActive(1)} ></div>
+          <div style={dot} onTouchTap={()=>this.setActive(2)}></div>
+        </div>
+      )
+    }
+    else if(this.state.active === 2){
+      return(
+        <div style={dotContainer}>
+          <div style={dot} onTouchTap={()=>this.setActive(0)}></div>
+          <div style={dot} onTouchTap={()=>this.setActive(1)}></div>
+          <div style={active} onTouchTap={()=>this.setActive(2)}></div>
+        </div>
+      )
+    }
+
+
+  }
+  setActive=(i)=>{
+    var articles=this.state.data;
+    this.setState({
+      active:i,
+      activeArticle:articles[i]
     })
   }
 
@@ -232,27 +299,7 @@ const imageOverlay={
 
 
       }
-      const dotContainer={
-        position:"absolute",
-        background:"transparent",
-        left:"0",
-        right:"0",
-        bottom:"0",
-        margin:"0 auto",
-        zIndex:"999999",
-        height:"200px",
-        width:"200px",
-        display:"flex",
-        flexDirection:"row",
-        justifyContent:"space-around"
-      }
-      const dot={
-        width:"30px",
-        height:"30px",
-        borderRadius:"50%",
-        background:"#000000",
 
-      }
       const paper={
         height: "100vh",
         width: "90%",
@@ -290,8 +337,8 @@ const imageOverlay={
 
 
     const storyContainer={
-      background:"#141414",
-      height:"600px",
+      background:"#D1D1D1",
+      height:"500px",
       width:"370px",
       margin:"40 auto",
       fontFamily:"Nunito",
@@ -303,7 +350,7 @@ const imageOverlay={
       marginTop:"30px",
       textOverflow:"hidden",
 
-      borderRadius:"10px",
+      borderRadius:"0px",
       display:"flex",
       flexDirection:"column",
 
@@ -312,9 +359,9 @@ const imageOverlay={
 const storyContent={
     display:"flex",
     flexDirection:"column",
-    alignItems:"center",
+    alignItems:"flex-start",
     height:"300px",
-    width:"17%",
+
     textOverflow:"hidden",
 
 
@@ -401,12 +448,12 @@ const blogTitle={
   color:"#E3E3E3",
   fontFamily:"Amiko",
   fontWeight:"bold",
-  textAlign:"right",
+  
   height:"100px",
   width:"100%",
   fontSize:".5em",
   textDecoration:"none",
-  paddingLeft:"50px",
+
   marginTop:"5px"
 
 }
@@ -461,6 +508,10 @@ const articleBody={
 
 
 }
+const description={
+  margin:"0 auto",
+  textAlign:"left",
+}
 const knowWhat={
   height:"200px",
   width:"100%",
@@ -487,11 +538,11 @@ const loveThe={
   textAlign:"center",
   fontWeight:"bold",
   background:"#ffffff",
-  color:"#3D82D4",
+  color:"#FF900B",
   wordSpacing:".5em",
   letterSpacing:".2em",
   paddingTop:"150px",
-  paddingBottom:"150px",
+  paddingBottom:"50px",
   display:"flex",
   flexDirection:"column",
   alignItems:"center",
@@ -506,7 +557,8 @@ const theWuz={
 
 }
 const razDaz={
-  margin:"auto",
+  margin:"0 auto",
+  marginTop:"50px",
   display:"flex",
   alignItems:"center",
   maxWidth:"60%",
@@ -516,6 +568,32 @@ const signUp={
 }
 const signIn={
 
+}
+const beLocal={
+  display:"flex",
+  flexDirection:"row",
+  hieght:"800px",
+  width:"100%",
+
+}
+const the={
+  fontFamily:"Amiko",
+  fontSize:"2em",
+  display:"flex",
+  flexDirection:"column",
+  width:"60%",
+  height:"400px",
+  background:"#F5F5F5",
+  margin:"30px",
+  marginTop:"70px",
+  overflow:"hidden",
+}
+const localImg={
+  margin:"0 auto",
+  marginTop:"10px",
+  display:"flex",
+  alignItems:"center",
+  width:"600px"
 }
  //BILL MURRAY AWESOMENESS *http://img.pandawhale.com/post-59658-razzle-dazzle-gif-Imgur-Bill-M-Ort8.gif*
     return (
@@ -569,23 +647,13 @@ const signIn={
                 </span>
               <IconButton onTouchTap={this.nextArticle}><ChevRight color="#ffffff"/></IconButton>
             </div>
-            <div style={dotContainer}>
-              <div style={dot}>
-
-              </div>
-              <div style={dot}>
-
-              </div>
-              <div style={dot}>
-
-              </div>
-            </div>
+            {this.renderDots()}
 
         </div>
 
 
         <div style={knowWhat}>
-          <span style={{color:"#CCC20C"}}>
+          <span style={{color:"#FFDD0D"}}>
           WUZ GUD</span><br/><span>AUGUSTA?
           </span>
         </div>
@@ -607,7 +675,7 @@ const signIn={
 
 
               <Link style={articleBody} to="/CyberTrain">
-                <span>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
+                <span style={description}>Nathan Deal signs bill to award AU with $50,000,000.00 to fund Cyber Training & Innovation Center.</span>
               </Link>
 
             </div>
@@ -624,12 +692,13 @@ const signIn={
 
             <div style={storyContent}>
 
-              <h3 style={blogTitleJ}>Jam</h3>
+              <h3 style={blogTitle}>Jam</h3>
               <Link style={articleBody} to="/Jam">
               <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
               </Link>
+              <Link style={blogLinkJ}>Jam..</Link>
             </div>
-            <Link style={blogLinkJ}>Jam..</Link>
+
 
           </div>
 
@@ -641,7 +710,7 @@ const signIn={
             <div style={storyContent}>
               <h3 style={blogTitle} >Infrastructure</h3>
               <Link style={articleBody} to="/Infrastructure">
-                <span>Round-a-bout construction on Wheeler @ Aumond.</span>
+                <span style={description}>Round-a-bout construction on Wheeler @ Aumond.</span>
               </Link>
 
             </div>
@@ -660,11 +729,11 @@ const signIn={
             <div style={storyContent}>
               <h3 style={blogTitleG}>Govt</h3>
               <Link style={articleBody} to="/Govt">
-                <span>Georgia Senate backs guns on campus, setting up final vote</span>
+                <span style={description}>Georgia Senate backs guns on campus, setting up final vote</span>
               </Link>
 
             </div>
-            <Link style={blogLink}>Gov't..</Link>
+            <Link style={blogLink}>Govt..</Link>
           </div>
 
 
@@ -678,7 +747,7 @@ const signIn={
 
               <h3 style={blogTitleG}>Dealings</h3>
               <Link style={articleBody} to="/Commerce">
-              <span>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
+              <span style={description}>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
               </Link>
 
             </div>
@@ -687,9 +756,31 @@ const signIn={
 
           </div>
           <div style={loveThe}>
-            LOVE THE WUZ.
+            BE A LOCAL.
           </div>
-          <div style={theWuz}><img style={razDaz} src="http://img.pandawhale.com/post-59658-razzle-dazzle-gif-Imgur-Bill-M-Ort8.gif"/></div>
+          <div><img style={razDaz} src="http://www.grolsch.com/sites/default/files/news/images/tumblr_mv5348v8gt1qghl49o1_500_0.gif"/></div>
+          <div style={beLocal}>
+            <div style={the}>
+              THE FOODIE
+              <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17903557_1414670271886383_2125974173994355801_n.jpg?oh=b48527ca148396a1e0341625f894b382&oe=597B396A"/>
+            </div>
+            <div style={the}>
+              THE DRUNK
+              <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/18319203_2216301041929026_8130694973249064808_o.jpg?oh=e2b0eacf48c2bc8bdc7f157c9f185511&oe=5975330D"/>
+            </div>
+            <div style={the}>
+              THE PATRON
+              <img src="http://baharris.org/historicpolandspring/ForrestHillsRicker/Golf_FHR.jpg"/>
+            </div>
+            <div style={the}>
+              THE SHOPPER
+              <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/18274863_10155256773699872_8219480682711732665_n.jpg?oh=c52d8d15a1c948cb672ea4d4601c8a46&oe=59B8F02D"/>
+            </div>
+            <div style={the}>
+            THE SWASHBUCKLER
+            <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/18033296_1394780767247993_344056224661744304_n.jpg?oh=bea111d2c0c5f3aba468ef3005905c50&oe=5977265C"/>
+            </div>
+          </div>
         </Responsive>
 
 
@@ -846,10 +937,10 @@ const signIn={
               </div>
 
             </div>
-            <div style={loveThe}>
-              LOVE THE WUZ.
+            <div>
+              BE A LOCAL.
             </div>
-            <div style={theWuz}><img style={razDaz} src="http://img.pandawhale.com/post-59658-razzle-dazzle-gif-Imgur-Bill-M-Ort8.gif"/></div>
+            <div style={theWuz}><img style={razDaz} src="http://www.grolsch.com/sites/default/files/news/images/tumblr_mv5348v8gt1qghl49o1_500_0.gif"/></div>
           </Responsive>
   </div>
     );
