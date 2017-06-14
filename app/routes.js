@@ -64,6 +64,15 @@ export default function createRoutes() {
           },
         },
         {
+        path: '/Swash',
+        name: 'Swash',
+        getComponent(nextState, comMod) {
+          import('containers/Swash')
+            .then(loadModule(comMod))
+            .catch(errorLoading);
+          },
+        },
+        {
         path: '/SignIn',
         name: 'SignIn',
         getComponent(nextState, comMod) {
