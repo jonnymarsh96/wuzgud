@@ -393,7 +393,7 @@ export default class Home extends React.PureComponent {
     const storyContent={
         display:"flex",
         flexDirection:"column",
-        alignItems:"flex-start",
+        alignItems:"center",
         height:"300px",
         textOverflow:"hidden",
     }
@@ -585,6 +585,13 @@ export default class Home extends React.PureComponent {
       width:"100%",
       background:"#ffffff",
     }
+    const local={
+      width:"100%",
+      height:"600px",
+      display:"flex",
+      flexDirection:"column",
+    }
+
     const razDaz={
       margin:"0 auto",
       marginTop:"50px",
@@ -598,7 +605,7 @@ export default class Home extends React.PureComponent {
     }
     const beLocal={
       display:"flex",
-      flexDirection:"row",
+      flexDirection:"column",
       hieght:"800px",
       width:"100%",
     }
@@ -608,11 +615,12 @@ export default class Home extends React.PureComponent {
       display:"flex",
       flexDirection:"column",
       width:"60%",
-      height:"400px",
+      height:"300px",
       background:"#F5F5F5",
       margin:"30px",
       marginTop:"70px",
       overflow:"hidden",
+      alignSelf:"center"
     }
     const localImg={
       margin:"0 auto",
@@ -1003,6 +1011,7 @@ export default class Home extends React.PureComponent {
               </Link>
               </div>
               </div>
+
           </Responsive>
   </div>
     );
