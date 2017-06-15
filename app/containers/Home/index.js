@@ -211,7 +211,7 @@ export default class Home extends React.PureComponent {
 
   const navColumn={
     width:"100%",
-    height:"150px",
+    height:"220px",
     background:"#141414",
     zIndex:"100",
     display:"flex",
@@ -243,6 +243,7 @@ export default class Home extends React.PureComponent {
           fontSize:"3em",
           textAlign:"left",
           marginTop:"10px",
+          marginLeft:"40px",
           textShadow:"4.3px 1.5px .3px #005AFF ",
           display:'flex',
           justifyContent:'center',
@@ -375,6 +376,23 @@ export default class Home extends React.PureComponent {
     }
     const storyContainer={
       background:"#D1D1D1",
+      height:"500px",
+      width:"80%",
+      margin:"40 auto",
+      fontFamily:"Nunito",
+      fontSize:"3em",
+      overflow:"hidden",
+      marginRight:"15px",
+      marginLeft:"15px",
+      marginBottom:"30px",
+      marginTop:"30px",
+      textOverflow:"hidden",
+      borderRadius:"0px",
+      display:"flex",
+      flexDirection:"column",
+    }
+    const storyContainerM={
+      background:"#D1D1D1",
       height:"300px",
       width:"80%",
       margin:"40 auto",
@@ -410,7 +428,7 @@ export default class Home extends React.PureComponent {
       textAlign:"start",
       height:"100px",
       width:"100%",
-      fontSize:".5em",
+      fontSize:".2em",
       color:"#E3E3E3",
       textDecoration:"none",
       marginLeft:"50px",
@@ -597,7 +615,7 @@ export default class Home extends React.PureComponent {
       marginTop:"50px",
       display:"flex",
       alignItems:"center",
-      maxWidth:"60%",
+      minWidth:"40%",
     }
     const signUp={
     }
@@ -614,8 +632,8 @@ export default class Home extends React.PureComponent {
       fontSize:"2em",
       display:"flex",
       flexDirection:"column",
-      width:"60%",
-      height:"300px",
+      width:"30%",
+      height:"400px",
       background:"#F5F5F5",
       margin:"30px",
       marginTop:"70px",
@@ -715,7 +733,7 @@ export default class Home extends React.PureComponent {
 
               <div style={storyContent}>
 
-                <h3 style={blogTitleC}>CyberTrain</h3>
+
 
 
                 <Link style={articleBody} to="/CyberTrain">
@@ -736,11 +754,11 @@ export default class Home extends React.PureComponent {
 
               <div style={storyContent}>
 
-                <h3 style={blogTitle}>Jam</h3>
+
                 <Link style={articleBody} to="/Jam">
                 <span>Freinds With Benifits puts on 4th annual Major Rager the thursday of masters week.</span>
                 </Link>
-                <Link style={blogLinkJ}>Jam..</Link>
+                <Link style={blogLinkJ}>Jam</Link>
               </div>
 
 
@@ -752,13 +770,13 @@ export default class Home extends React.PureComponent {
               <img style={storyImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17264794_273053533135955_2235100976553120977_n.jpg?oh=8a34eb015d5191d4c4933d78b4f137a5&oe=596F03E4"/>
 
               <div style={storyContent}>
-                <h3 style={blogTitle} >Infrastructure</h3>
+
                 <Link style={articleBody} to="/Infrastructure">
                   <span style={description}>Round-a-bout construction on Wheeler @ Aumond.</span>
                 </Link>
 
               </div>
-              <Link style={blogLink}>Inf..</Link>
+              <Link style={blogLink}>Infrastructure</Link>
             </div>
 
 
@@ -771,7 +789,7 @@ export default class Home extends React.PureComponent {
 
               <img style={storyImgG} src="https://images.travelpod.com/tripwow/photos/ta-00c5-9bd2-5ed2/the-capitol-building-denver-united-states+1152_12936487000-tpfil02aw-8073.jpg"/>
               <div style={storyContent}>
-                <h3 style={blogTitleG}>Govt</h3>
+
                 <Link style={articleBody} to="/Govt">
                   <Link style={description}>Georgia Senate backs guns on campus, setting up final vote</Link>
                 </Link>
@@ -789,13 +807,13 @@ export default class Home extends React.PureComponent {
 
               <div style={storyContent}>
 
-                <h3 style={blogTitleG}>Dealings</h3>
+
                 <Link style={articleBody} to="/Commerce">
                 <span style={description}>Burlington, Chipotle, MOD Pizza headed to Augusta Exchange</span>
                 </Link>
 
               </div>
-              <Link style={blogLinkD}>Dealings..</Link>
+              <Link style={blogLinkD}>Dealings</Link>
               </div>
 
             </div>
@@ -807,16 +825,16 @@ export default class Home extends React.PureComponent {
             </div>
             <div style={beLocal}>
               <div style={the}>
-                THE FOODIE
+                FOODIE
                 <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17903557_1414670271886383_2125974173994355801_n.jpg?oh=b48527ca148396a1e0341625f894b382&oe=597B396A"/>
               </div>
               <div style={the}>
-                GUD BUZZ
+                Buzz Gud
                 <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/18319203_2216301041929026_8130694973249064808_o.jpg?oh=e2b0eacf48c2bc8bdc7f157c9f185511&oe=5975330D"/>
               </div>
               <div style={the}>
                 PATRON
-                <img src="http://baharris.org/historicpolandspring/ForrestHillsRicker/Golf_FHR.jpg"/>
+                <img style={localImg} src="http://baharris.org/historicpolandspring/ForrestHillsRicker/Golf_FHR.jpg"/>
               </div>
               <div style={the}>
                 CLOTHES HORSE

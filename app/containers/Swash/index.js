@@ -135,14 +135,12 @@
 
      }
      const logoStyle={
-       width:"200px",
-       height:"200px",
+       width:"100px",
+       height:"100px",
        marginTop:"30px",
        color:"#ffffff",
-
        marginLeft:"50px",
        fontSize:"300px",
-
      }
      const navLink={
        textDecoration:"0",
@@ -154,7 +152,6 @@
        fontSize:"18px",
        fontFamily:"Open Sans",
        fontWeight:"bold",
-
      }
      const boxOne={
        display:"flex",
@@ -164,8 +161,6 @@
        color:"#F28705",
        margin:"0 auto",
        marginTop:"200px",
-
-
      }
      const heading={
        display:"flex",
@@ -625,6 +620,9 @@
        textAlign:"center",
        color:"#ffffff",
      }
+     const logo={
+       height:"450px"
+     }
 
 
      return (
@@ -635,7 +633,7 @@
          <Responsive minDeviceWidth={1024}>
            <header style={headerStyle}>
              <nav style={navBar}>
-               <div style={logoStyle}><img src="http://localhost:8000/swashnew.png"/>
+               <div style={logoStyle}><img style={logo} src="http://localhost:8000/swashnew.png"/>
                </div>
                <div style={signIn} onTouchTap={this.handleOpen}>
                  Please Log In <img src="http://localhost:8000/icons/002-log.png"/>
