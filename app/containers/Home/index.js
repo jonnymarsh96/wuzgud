@@ -97,7 +97,7 @@ export default class Home extends React.PureComponent {
       right:"0",
       bottom:"0",
       margin:"0 auto",
-      marginTop:"600px",
+      marginTop:"1000px",
       zIndex:"999999",
       height:"200px",
       width:"200px",
@@ -119,6 +119,7 @@ export default class Home extends React.PureComponent {
       background:"rgba(0,0,0,.8)",
       border:"3px solid rgba(0,0,0,1)",
     }
+
 
     if(this.state.active === 0){
       return(
@@ -645,9 +646,45 @@ export default class Home extends React.PureComponent {
       marginTop:"10px",
       display:"flex",
       alignItems:"center",
-      width:"600px"
+      width:"600px",
+      display: "block",
+      width: "100%",
+      height: "auto",
     }
- //BILL MURRAY
+    const container2={
+  position: "relative",
+  width: "50%",
+}
+
+
+
+const overlay={
+  position: "absolute",
+  top: "0",
+  bottom: "0",
+  left: "0",
+  right: "0",
+  height: "100%",
+  width: "100%",
+  opacity: "0",
+  transition: ".5s ease",
+  background: "rgba(0,0,0,.4)",
+}
+
+const container:hover .overlay={
+  opacity: "1",
+}
+
+const text={
+  color: "white",
+  fontSize: "20px",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+
+}
+
     return (
       <div >
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
@@ -818,18 +855,26 @@ export default class Home extends React.PureComponent {
 
             </div>
             <div style={loveThe}>
-              BE A LOCAL.
+              BE LOCAL
             </div>
             <div>
               <img style={razDaz} src="http://www.grolsch.com/sites/default/files/news/images/tumblr_mv5348v8gt1qghl49o1_500_0.gif"/>
             </div>
             <div style={beLocal}>
+
               <div style={the}>
                 FOODIE
-                <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17903557_1414670271886383_2125974173994355801_n.jpg?oh=b48527ca148396a1e0341625f894b382&oe=597B396A"/>
+                <div style={container2}>
+                  <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17903557_1414670271886383_2125974173994355801_n.jpg?oh=b48527ca148396a1e0341625f894b382&oe=597B396A"/>
+                  <div style={overlay}>
+                    <div style={text}>
+                      Hello World
+                    </div>
+                  </div>
+                </div>
               </div>
               <div style={the}>
-                Buzz Gud
+                BuzGud
                 <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/18319203_2216301041929026_8130694973249064808_o.jpg?oh=e2b0eacf48c2bc8bdc7f157c9f185511&oe=5975330D"/>
               </div>
               <div style={the}>
@@ -1011,7 +1056,7 @@ export default class Home extends React.PureComponent {
                 <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17903557_1414670271886383_2125974173994355801_n.jpg?oh=b48527ca148396a1e0341625f894b382&oe=597B396A"/>
               </div>
               <div style={the}>
-                GUD BUZZ
+                BUZ GUD
                 <img style={localImg} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/18319203_2216301041929026_8130694973249064808_o.jpg?oh=e2b0eacf48c2bc8bdc7f157c9f185511&oe=5975330D"/>
               </div>
               <div style={the}>

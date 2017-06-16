@@ -699,7 +699,7 @@
            <div style={parallaxTrek}>
              <div style={trekBox}>
                <span style={trekText}>
-               If you like taking in the wild on your stroll up (or across). We're betting you'll like it even more in our box of monthly hand picked selection of comfy, hi-tech mountain garb.<br/>
+               So, you like taking in nature on your stroll through the wild. We're betting you'll like it even more wearing one of these hand picked selection of comfy, hi-tech mountain garb we send to your door monthly.<br/>
                <span style={brands}> Featuring Brands such as Mountain Khaki, Kavu, NorthFace and more...</span>
                </span>
              </div>
